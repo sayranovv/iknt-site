@@ -1,10 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="mx-auto max-w-2xl bg-black">
-    <Header />
+  <div class="mx-auto max-w-screen-xl font-custom">
+    <Header class="mt-8 z-10" />
     <div>
-      <Slot />
+      <slot />
     </div>
   </div>
 </template>
