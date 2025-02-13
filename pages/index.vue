@@ -22,8 +22,8 @@
     </section>
     <section class="mt-24 text-white">
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(31,48,255,0.9)]">Об институте</h2>
-      <div class="mt-6 flex justify-between gap-10">
-        <div class="w-1/2 flex flex-col gap-6 font-light text-2xl leading-tight">
+      <div class="mt-7 flex justify-between gap-10">
+        <div class="w-1/2 flex flex-col gap-7 font-light text-2xl leading-tight">
           <p>
             <span class="font-bold">Институт Компьютерных Наук и Технологий ПГНИУ</span> — это центр
             передовых IT-решений и инноваций. Мы готовим специалистов в области программирования,
@@ -40,7 +40,17 @@
 
         <div class="w-1/2">
           <Badge />
+          <Badge />
+          <Badge />
         </div>
+      </div>
+    </section>
+    <section class="mt-40 text-white">
+      <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">
+        Последние новости
+      </h2>
+      <div>
+        <NewsCarousel />
       </div>
     </section>
   </div>
