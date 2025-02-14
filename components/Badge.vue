@@ -7,6 +7,9 @@
     <span
       class="absolute inset-0 rounded-full p-[3px] bg-gradient-to-br from-orange-500 via-pink-500 to-blue-500"
     ></span>
+    <!--    <span-->
+    <!--      class="absolute inset-0 rounded-full p-[3px] bg-gradient-to-br from-[#ffcc00] via-[#991f99] to-[#150080]"-->
+    <!--    ></span>-->
     <span
       class="absolute inset-0 rounded-full p-[3px] bg-gradient-to-b from-white to-transparent opacity-60"
     ></span>

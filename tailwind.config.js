@@ -15,6 +15,10 @@ export default {
       }
     },
     extend: {
+      boxShadow: {
+        glow: '0px 0px 120px 180px rgba(255, 0, 0, 0.9)', // Красное свечение
+        'blue-glow': '0px 0px 50px 30px rgba(0, 100, 255, 0.8)' // Синее свечение
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

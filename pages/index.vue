@@ -50,7 +50,30 @@
         Последние новости
       </h2>
       <div>
-        <NewsCarousel />
+        <!--        <NewsCarousel />-->
+      </div>
+    </section>
+    <section class="mt-40 text-white">
+      <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">Почему ИКНТ?</h2>
+      <div class="mt-16">
+        <div class="flex gap-10 px-10">
+          <div class="w-1/2">
+            <h4 class="text-2xl font-bold tracking-wide">
+              Высококвалифицированный преподовательский состав
+            </h4>
+            <div
+              class="mt-1 w-full h-1 rounded-lg bg-gradient-to-r from-orange-600 via-pink-600 to-blue-600"
+            ></div>
+            <p class="mt-5 text-xl font-light leading-tight">
+              Наш институт состоит из опытных профессионалов, увлеченных преподаванием
+            </p>
+          </div>
+          <div class="relative w-1/2">
+            <img src="/assets/img/blue.png"
+              class="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 z-50"
+            ></img>
+          </div>
+        </div>
       </div>
     </section>
   </div>
