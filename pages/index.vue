@@ -2,11 +2,14 @@
 
 <template>
   <div>
-    <img
-      src="/assets/img/bg-gradient-img.png"
-      alt="bg gradient"
-      class="absolute w-screen h-screen left-0 top-0 object-cover z-0"
-    />
+    <!--    <img-->
+    <!--      src="/assets/img/bg-gradient-img.png"-->
+    <!--      alt="bg gradient"-->
+    <!--      class="absolute w-screen h-screen left-0 top-0 object-cover z-0"-->
+    <!--    />-->
+    <div
+      class="absolute w-screen h-screen left-0 top-0 z-0 bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]"
+    ></div>
     <section class="relative z-10 pt-56 pb-20 text-white h-screen flex flex-col justify-between">
       <h1 class="max-w-[730px] text-7xl">
         <span class="font-black tracking-wide">Будущее начинается здесь:</span><br />
@@ -55,11 +58,11 @@
     </section>
     <section class="mt-40 text-white">
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">Почему ИКНТ?</h2>
-      <div class="mt-16">
-        <div class="flex gap-10 px-10">
+      <div class="mt-16 flex flex-col gap-y-[500px]">
+        <div class="flex gap-10 px-10 flex-nowrap">
           <div class="w-1/2">
-            <h4 class="text-2xl font-bold tracking-wide">
-              Высококвалифицированный преподовательский состав
+            <h4 class="text-2xl font-bold tracking-wide leading-tight">
+              Высококвалифицированный преподавательский состав
             </h4>
             <div
               class="mt-1 w-full h-1 rounded-lg bg-gradient-to-r from-orange-600 via-pink-600 to-blue-600"
@@ -68,10 +71,103 @@
               Наш институт состоит из опытных профессионалов, увлеченных преподаванием
             </p>
           </div>
-          <div class="relative w-1/2">
-            <img src="/assets/img/blue.png"
-              class="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 z-50"
-            ></img>
+          <div class="w-1/2 relative">
+            <div
+              class="absolute w-[400px] h-[400px] bg-blue-600 blur-[150px] rounded-full -right-12 top-1/2 -translate-y-1/2"
+            ></div>
+          </div>
+        </div>
+        <div class="flex gap-20 px-10 flex-nowrap">
+          <div class="w-1/2 relative">
+            <div
+              class="absolute w-[400px] h-[400px] bg-fuchsia-600 blur-[150px] rounded-full -left-12 top-1/2 -translate-y-1/2"
+            ></div>
+          </div>
+          <div class="w-1/2">
+            <h4 class="text-2xl font-bold leading-tight tracking-wide">Современное оборудование</h4>
+            <div
+              class="mt-1 w-full h-1 rounded-lg bg-gradient-to-r from-orange-600 via-pink-600 to-blue-600"
+            ></div>
+            <p class="mt-5 text-xl font-light leading-tight">
+              Наши студенты имеют доступ к современному оборудованию, включая компьютерные
+              лаборатории и удобные зоны для совместной работы
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-10 px-10 flex-nowrap">
+          <div class="w-1/2">
+            <h4 class="text-2xl font-bold tracking-wide leading-tight">
+              Надежные связи с отраслью
+            </h4>
+            <div
+              class="mt-1 w-full h-1 rounded-lg bg-gradient-to-r from-orange-600 via-pink-600 to-blue-600"
+            ></div>
+            <p class="mt-5 text-xl font-light leading-tight">
+              Мы имеем надежные связи с ИТ-индустрией, что дает нашим студентам возможности для
+              прохождения стажировок, участия в исследовательских проектах и трудоустройства
+            </p>
+          </div>
+          <div class="w-1/2 relative">
+            <div
+              class="absolute w-[400px] h-[400px] bg-orange-400 blur-[150px] rounded-full -right-12 top-1/2 -translate-y-1/2"
+            ></div>
+          </div>
+        </div>
+        <div class="flex gap-20 px-10 flex-nowrap">
+          <div class="w-1/2 relative">
+            <div
+              class="absolute w-[400px] h-[400px] bg-blue-600 blur-[150px] rounded-full -left-12 top-1/2 -translate-y-1/2"
+            ></div>
+          </div>
+          <div class="w-1/2">
+            <h4 class="text-2xl font-bold leading-tight tracking-wide">
+              Индивидуальный подход и практика
+            </h4>
+            <div
+              class="mt-1 w-full h-1 rounded-lg bg-gradient-to-r from-orange-600 via-pink-600 to-blue-600"
+            ></div>
+            <p class="mt-5 text-xl font-light leading-tight">
+              Вы сами формируете четверть учебной программы, подстраивая её под свои интересы.
+              Половина учебного времени посвящена практическим занятиям и стажировкам
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-10 px-10 flex-nowrap">
+          <div class="w-1/2">
+            <h4 class="text-2xl font-bold tracking-wide leading-tight">
+              Базовые знания и карьерное планирование
+            </h4>
+            <div
+              class="mt-1 w-full h-1 rounded-lg bg-gradient-to-r from-orange-600 via-pink-600 to-blue-600"
+            ></div>
+            <p class="mt-5 text-xl font-light leading-tight">
+              Фундамент, состоящий из навыков и умений, необходимых для любого
+              ИТ-направления.Индивидуальные карьерные рекомендации и сборка портфолио
+            </p>
+          </div>
+          <div class="w-1/2 relative">
+            <div
+              class="absolute w-[400px] h-[400px] bg-fuchsia-600 blur-[150px] rounded-full -right-12 top-1/2 -translate-y-1/2"
+            ></div>
+          </div>
+        </div>
+        <div class="flex gap-20 px-10 flex-nowrap">
+          <div class="w-1/2 relative">
+            <div
+              class="absolute w-[400px] h-[400px] bg-orange-400 blur-[150px] rounded-full -left-12 top-1/2 -translate-y-1/2"
+            ></div>
+          </div>
+          <div class="w-1/2">
+            <h4 class="text-2xl font-bold leading-tight tracking-wide">
+              Адаптация к рынку и профессиональное развитие
+            </h4>
+            <div
+              class="mt-1 w-full h-1 rounded-lg bg-gradient-to-r from-orange-600 via-pink-600 to-blue-600"
+            ></div>
+            <p class="mt-5 text-xl font-light leading-tight">
+              Учебные планы составлены на основе вакансий при участии ведущих ИТ-компаний. Участие в
+              командных проектах с первого курса под руководством опытных менторов
+            </p>
           </div>
         </div>
       </div>
