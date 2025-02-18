@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Test from '~/components/Three/test.vue'
+</script>
 
 <template>
   <div>
@@ -8,9 +10,9 @@
     <!--      class="absolute w-screen h-screen left-0 top-0 object-cover z-0"-->
     <!--    />-->
     <div
-      class="absolute w-screen h-screen left-0 top-0 z-0 bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]"
+      class="absolute -z-10 w-screen h-screen left-0 top-0 bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]"
     ></div>
-    <section class="relative z-10 pt-56 pb-20 text-white h-screen flex flex-col justify-between">
+    <section class="text-white flex flex-col h-screen justify-between pt-36 pb-36">
       <h1 class="max-w-[730px] text-7xl">
         <span class="font-black tracking-wide">Будущее начинается здесь:</span><br />
         Институт Компьютерных Наук и Технологий
@@ -75,6 +77,7 @@
             <div
               class="absolute w-[400px] h-[400px] bg-blue-600 blur-[150px] rounded-full -right-12 top-1/2 -translate-y-1/2"
             ></div>
+            <Test class="absolute -right-12 top-1/2 -translate-y-1/2" />
           </div>
         </div>
         <div class="flex gap-20 px-10 flex-nowrap">
@@ -171,6 +174,11 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="mt-52 text-white">
+      <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">
+        Образовательные программы
+      </h2>
     </section>
   </div>
 </template>

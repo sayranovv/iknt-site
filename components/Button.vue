@@ -2,7 +2,7 @@
 
 <template>
   <button
-    class="text-xl tracking-wide font-black bg-white bg-opacity-20 border-2 border-white border-opacity-60 py-2 px-9 rounded-lg "
+    class="text-xl tracking-wide font-black bg-white bg-opacity-10 border-2 border-white border-opacity-40 py-2 px-9 rounded-lg "
     hover:
   >
     <slot />

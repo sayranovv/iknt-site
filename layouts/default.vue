@@ -2,7 +2,7 @@
 
 <template>
   <div class="mx-auto max-w-screen-xl font-custom">
-    <Header class="mt-8 z-10" />
+    <Header class="mt-12" />
     <div>
       <slot />
     </div>
