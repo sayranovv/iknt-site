@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Test from '~/components/Three/test.vue'
+import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
 </script>
 
 <template>
@@ -179,6 +180,17 @@ import Test from '~/components/Three/test.vue'
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">
         Образовательные программы
       </h2>
+      <div
+        class="mx-auto mt-12 rounded-lg border border-white border-opacity-30 bg-white bg-opacity-10 px-4 py-2 flex gap-5 w-fit"
+      >
+        <p>Бакалавриат</p>
+        <p>Магистратура</p>
+      </div>
+      <div class="mt-12 flex justify-between gap-5">
+        <EdProgramsCard />
+        <EdProgramsCard />
+        <EdProgramsCard />
+      </div>
     </section>
   </div>
 </template>
