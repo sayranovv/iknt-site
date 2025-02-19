@@ -2,6 +2,9 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
 import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
+import { useEdProgramsStore } from '@/stores/edPrograms.store'
+
+const edProgramsStore = useEdProgramsStore()
 </script>
 
 <template>
@@ -20,19 +23,25 @@ import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
     }"
     class="mySwiper"
   >
-    <SwiperSlide class="w-1/3">
-      <EdProgramsCard />
+    <SwiperSlide
+      class="w-1/3 h-[900px]"
+      v-for="program in edProgramsStore.edPrograms"
+      :key="program.id"
+    >
+      <EdProgramsCard
+        :letters3="program.letters3"
+        :title="program.title"
+        :programName="program.programName"
+        :link="program.link"
+        :degree="program.degree"
+        :programCode="program.programCode"
+        :industries="program.industries"
+        :maxScore="program.maxScore"
+        :averageScore="program.averageScore"
+        :minScore="program.minScore"
+        :budgetPlaces="program.budgetPlaces"
+      />
     </SwiperSlide>
-    <SwiperSlide class="w-1/3">
-      <EdProgramsCard />
-    </SwiperSlide>
-    <SwiperSlide class="w-1/3">
-      <EdProgramsCard />
-    </SwiperSlide>
-    <SwiperSlide class="w-1/3">
-      <EdProgramsCard />
-    </SwiperSlide>
-    <!-- Можешь добавить дополнительные <SwiperSlide> с другими карточками -->
   </Swiper>
 </template>
 
