@@ -12,7 +12,7 @@ import Test from '~/components/Three/test.vue'
     <div
       class="absolute -z-10 w-screen h-screen left-0 top-0 bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]"
     ></div>
-    <section class="text-white flex flex-col h-screen justify-between pt-36 pb-36">
+    <section class="text-white flex flex-col h-screen justify-between pt-28 pb-36">
       <h1 class="max-w-[730px] text-7xl">
         <span class="font-black tracking-wide">Будущее начинается здесь:</span><br />
         Институт Компьютерных Наук и Технологий
