@@ -23,7 +23,9 @@ defineProps<{
     </h2>
     <h3 class="text-3xl text-center">{{ title }}</h3>
     <h4 class="font-light text-center text-xl">{{ programName }}</h4>
-    <button class="bg-white rounded-full w-full p-4 text-black">Учебный план</button>
+    <a :href="link" class="relative z-10 bg-white text-center rounded-full w-full p-4 text-black"
+      >Учебный план</a
+    >
     <ul class="font-light text-lg w-full">
       <li>
         <span class="font-bold">{{ degree }}</span>
@@ -31,7 +33,6 @@ defineProps<{
       <li><span class="font-bold">Код направления:</span> {{ programCode }}</li>
       <li><span class="font-bold">Отрасли:</span> {{ industries }}</li>
     </ul>
-    <!--    <div class="w-full h-px rounded-full bg-white bg-opacity-50"></div>-->
     <div class="w-full">
       <h4 class="text-lg font-bold">Баллы:</h4>
       <table class="w-full text-center mt-4">

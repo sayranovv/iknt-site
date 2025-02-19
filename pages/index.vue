@@ -186,13 +186,12 @@ import EdProgramsSlider from '~/components/Sliders/EdProgramsSlider.vue'
       >
         <p>Бакалавриат</p>
         <p>Магистратура</p>
+        <p>Специалитет</p>
       </div>
-      <!--      <div class="mt-12 flex justify-between gap-5">-->
-      <!--        <EdProgramsCard />-->
-      <!--        <EdProgramsCard />-->
-      <!--        <EdProgramsCard />-->
-      <!--      </div>-->
       <EdProgramsSlider class="py-10" />
+    </section>
+    <section class="mt-12 text-white">
+      <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">Наши партнеры</h2>
     </section>
   </div>
 </template>
