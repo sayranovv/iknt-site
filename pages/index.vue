@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Test from '~/components/Three/test.vue'
 import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
+import EdProgramsSlider from '~/components/Sliders/EdProgramsSlider.vue'
 </script>
 
 <template>
@@ -186,11 +187,12 @@ import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
         <p>Бакалавриат</p>
         <p>Магистратура</p>
       </div>
-      <div class="mt-12 flex justify-between gap-5">
-        <EdProgramsCard />
-        <EdProgramsCard />
-        <EdProgramsCard />
-      </div>
+      <!--      <div class="mt-12 flex justify-between gap-5">-->
+      <!--        <EdProgramsCard />-->
+      <!--        <EdProgramsCard />-->
+      <!--        <EdProgramsCard />-->
+      <!--      </div>-->
+      <EdProgramsSlider class="py-10" />
     </section>
   </div>
 </template>

@@ -28,7 +28,7 @@
       <li><span class="font-bold">Код направления:</span> 01.03.02</li>
       <li><span class="font-bold">Отрасли:</span> Машинное обучение, Data Science</li>
     </ul>
-    <div class="w-full h-px rounded-full bg-white bg-opacity-50"></div>
+    <!--    <div class="w-full h-px rounded-full bg-white bg-opacity-50"></div>-->
     <div class="w-full">
       <h4 class="text-lg font-bold">Баллы:</h4>
       <table class="w-full text-center mt-4">
