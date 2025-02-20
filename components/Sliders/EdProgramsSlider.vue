@@ -5,12 +5,17 @@ import { useEdProgramsStore } from '@/stores/edPrograms.store'
 import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
 import { ref } from 'vue'
 
-const activeTab = ref<null | 'Бакалавриат' | 'Специалитет' | 'Магистратура'>('')
+const activeTab = ref<null | 'Бакалавриат' | 'Специалитет' | 'Магистратура'>(null)
+const isTransitioning = ref(false)
 
 const edProgramsStore = useEdProgramsStore()
 const buttonClick = (tab: string): void => {
+  isTransitioning.value = true
   activeTab.value = tab
-  edProgramsStore.selectedDegree = tab
+  setTimeout(() => {
+    edProgramsStore.selectedDegree = tab
+    isTransitioning.value = false
+  }, 300)
 }
 </script>
 
@@ -122,42 +127,80 @@ const buttonClick = (tab: string): void => {
         Магистратура
       </p>
     </div>
-    <Swiper
-      :modules="[EffectCoverflow, Pagination]"
-      effect="coverflow"
-      :grabCursor="true"
-      :centeredSlides="true"
-      slidesPerView="auto"
-      :coverflowEffect="{
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: false
-      }"
-      class="mySwiper py-10"
-    >
-      <SwiperSlide
-        class="w-full tablet:w-1/2 laptop-s:w-1/3 h-[900px]"
-        v-for="program in edProgramsStore.filteredPrograms"
-        :key="program.id"
+    <div>
+      <Swiper
+        :modules="[EffectCoverflow, Pagination]"
+        effect="coverflow"
+        :grabCursor="true"
+        :centeredSlides="true"
+        slidesPerView="auto"
+        :coverflowEffect="{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false
+        }"
+        class="mySwiper py-10"
       >
-        <EdProgramsCard
-          :letters3="program.letters3"
-          :title="program.title"
-          :programName="program.programName"
-          :link="program.link"
-          :degree="program.degree"
-          :programCode="program.programCode"
-          :industries="program.industries"
-          :maxScore="program.maxScore"
-          :averageScore="program.averageScore"
-          :minScore="program.minScore"
-          :budgetPlaces="program.budgetPlaces"
-        />
-      </SwiperSlide>
-    </Swiper>
+        <SwiperSlide
+          class="w-full tablet:w-1/2 laptop-s:w-1/3 h-[900px]"
+          v-for="program in edProgramsStore.filteredPrograms"
+          :key="program.id"
+        >
+          <EdProgramsCard
+            :letters3="program.letters3"
+            :title="program.title"
+            :programName="program.programName"
+            :link="program.link"
+            :degree="program.degree"
+            :programCode="program.programCode"
+            :industries="program.industries"
+            :maxScore="program.maxScore"
+            :averageScore="program.averageScore"
+            :minScore="program.minScore"
+            :budgetPlaces="program.budgetPlaces"
+            class="fade"
+            :class="{ 'fade-out': isTransitioning }"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+</style>
