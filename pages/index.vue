@@ -2,15 +2,11 @@
 import Test from '~/components/Three/test.vue'
 import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
 import EdProgramsSlider from '~/components/Sliders/EdProgramsSlider.vue'
+import PartnersSlider from '~/components/Sliders/PartnersSlider.vue'
 </script>
 
 <template>
   <div>
-    <!--    <img-->
-    <!--      src="/assets/img/bg-gradient-img.png"-->
-    <!--      alt="bg gradient"-->
-    <!--      class="absolute w-screen h-screen left-0 top-0 object-cover z-0"-->
-    <!--    />-->
     <div
       class="absolute -z-10 w-screen h-screen left-0 top-0 bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]"
     ></div>
@@ -192,6 +188,7 @@ import EdProgramsSlider from '~/components/Sliders/EdProgramsSlider.vue'
     </section>
     <section class="mt-12 text-white">
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">Наши партнеры</h2>
+      <PartnersSlider class="mt-10" />
     </section>
   </div>
 </template>
