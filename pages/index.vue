@@ -182,8 +182,7 @@ import ChooseEdProgram from '~/components/ChooseEdProgram.vue'
       <h2 class="text-5xl font-black text-center drop-shadow-[0_0_16px_rgba(255,0,255,0.9)]">
         Образовательные программы
       </h2>
-      <ChooseEdProgram />
-      <EdProgramsSlider class="py-10 w-full" />
+      <EdProgramsSlider />
     </section>
     <section class="mt-12 text-white">
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">Наши партнеры</h2>

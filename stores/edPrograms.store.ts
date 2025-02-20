@@ -131,8 +131,17 @@ export const useEdProgramsStore = defineStore('edProgramsStore', () => {
       budgetPlaces: 30
     }
   ])
+  const selectedDegree = ref<string | null>(null)
+
+  const filteredPrograms = computed(() => {
+    return selectedDegree.value
+      ? edPrograms.value.filter(program => program.degree === selectedDegree.value)
+      : edPrograms.value
+  })
 
   return {
-    edPrograms
+    edPrograms,
+    selectedDegree,
+    filteredPrograms
   }
 })

@@ -3,46 +3,161 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
 import { useEdProgramsStore } from '@/stores/edPrograms.store'
 import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
+import { ref } from 'vue'
+
+const activeTab = ref<null | 'Бакалавриат' | 'Специалитет' | 'Магистратура'>('')
 
 const edProgramsStore = useEdProgramsStore()
+const buttonClick = (tab: string): void => {
+  activeTab.value = tab
+  edProgramsStore.selectedDegree = tab
+}
 </script>
 
 <template>
-  <Swiper
-    :modules="[EffectCoverflow, Pagination]"
-    effect="coverflow"
-    :grabCursor="true"
-    :centeredSlides="true"
-    slidesPerView="auto"
-    :coverflowEffect="{
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: false
-    }"
-    class="mySwiper"
-  >
-    <SwiperSlide
-      class="w-1/3 h-[900px]"
-      v-for="program in edProgramsStore.edPrograms"
-      :key="program.id"
+  <div>
+    <div class="mx-auto mt-12 rounded-lg bg-white bg-opacity-10 flex w-fit">
+      <p
+        @click="buttonClick(null)"
+        class="border-t border-b border-l rounded-l-lg px-4 py-2 hover:border-teal-400 hover:shadow-[0px_0px_30px_10px_rgba(0,255,150,0.4)] backdrop-blur-2xl transition-all before:absolute before:inset-0 before:bg-teal-500 before:rounded-l-lg before:opacity-0 hover:before:opacity-20"
+        :class="
+          activeTab === null
+            ? [
+                'z-10',
+                'border-teal-400',
+                'shadow-[0px_0px_30px_10px_rgba(0,255,150,0.4)]',
+                'before:absolute',
+                'before:inset-0',
+                'before:bg-teal-500',
+                'before:opacity-20'
+              ]
+            : [
+                'relative',
+                'z-20',
+                'hover:z-0',
+                'before:opacity-0',
+                'border-white',
+                'border-opacity-20'
+              ]
+        "
+      >
+        Все
+      </p>
+      <p
+        @click="buttonClick('Бакалавриат')"
+        class="border-t border-b py-2 px-2.5 hover:border-blue-400 hover:shadow-[0px_0px_30px_10px_rgba(0,0,255,0.4)] backdrop-blur-2xl transition-all before:absolute before:inset-0 before:bg-blue-500 before:opacity-0 hover:before:opacity-20"
+        :class="
+          activeTab === 'Бакалавриат'
+            ? [
+                'z-10',
+                'border-blue-400',
+                'shadow-[0px_0px_30px_10px_rgba(0,0,255,0.4)]',
+                'before:absolute',
+                'before:inset-0',
+                'before:bg-blue-500',
+                'before:opacity-20'
+              ]
+            : [
+                'relative',
+                'z-20',
+                'hover:z-0',
+                'before:opacity-0',
+                'border-white',
+                'border-opacity-20'
+              ]
+        "
+      >
+        Бакалавриат
+      </p>
+      <p
+        @click="buttonClick('Специалитет')"
+        class="border-t border-b py-2 px-2.5 hover:border-fuchsia-400 hover:shadow-[0px_0px_30px_10px_rgba(255,0,255,0.4)] backdrop-blur-2xl transition-all before:absolute before:inset-0 before:bg-fuchsia-500 hover:before:opacity-20"
+        :class="
+          activeTab === 'Специалитет'
+            ? [
+                'z-10',
+                'border-fuchsia-400',
+                'shadow-[0px_0px_30px_10px_rgba(255,0,255,0.4)]',
+                'before:absolute',
+                'before:inset-0',
+                'before:bg-fuchsia-500',
+                'before:opacity-20'
+              ]
+            : [
+                'relative',
+                'z-20',
+                'hover:z-0',
+                'before:opacity-0',
+                'border-white',
+                'border-opacity-20'
+              ]
+        "
+      >
+        Специалитет
+      </p>
+      <p
+        @click="buttonClick('Магистратура')"
+        class="border-t border-b border-r rounded-r-lg px-4 py-2 hover:border-orange-400 hover:shadow-[0px_0px_30px_10px_rgba(255,150,0,0.4)] backdrop-blur-2xl transition-all before:absolute before:inset-0 before:bg-orange-500 before:rounded-r-lg before:opacity-0 hover:before:opacity-20"
+        :class="
+          activeTab === 'Магистратура'
+            ? [
+                'z-10',
+                'border-orange-400',
+                'shadow-[0px_0px_30px_10px_rgba(255,150,0,0.4)]',
+                'before:absolute',
+                'before:inset-0',
+                'before:bg-orange-500',
+                'before:opacity-20'
+              ]
+            : [
+                'relative',
+                'z-20',
+                'hover:z-0',
+                'before:opacity-0',
+                'border-white',
+                'border-opacity-20'
+              ]
+        "
+      >
+        Магистратура
+      </p>
+    </div>
+    <Swiper
+      :modules="[EffectCoverflow, Pagination]"
+      effect="coverflow"
+      :grabCursor="true"
+      :centeredSlides="true"
+      slidesPerView="auto"
+      :coverflowEffect="{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false
+      }"
+      class="mySwiper py-10"
     >
-      <EdProgramsCard
-        :letters3="program.letters3"
-        :title="program.title"
-        :programName="program.programName"
-        :link="program.link"
-        :degree="program.degree"
-        :programCode="program.programCode"
-        :industries="program.industries"
-        :maxScore="program.maxScore"
-        :averageScore="program.averageScore"
-        :minScore="program.minScore"
-        :budgetPlaces="program.budgetPlaces"
-      />
-    </SwiperSlide>
-  </Swiper>
+      <SwiperSlide
+        class="w-full tablet:w-1/2 laptop-s:w-1/3 h-[900px]"
+        v-for="program in edProgramsStore.filteredPrograms"
+        :key="program.id"
+      >
+        <EdProgramsCard
+          :letters3="program.letters3"
+          :title="program.title"
+          :programName="program.programName"
+          :link="program.link"
+          :degree="program.degree"
+          :programCode="program.programCode"
+          :industries="program.industries"
+          :maxScore="program.maxScore"
+          :averageScore="program.averageScore"
+          :minScore="program.minScore"
+          :budgetPlaces="program.budgetPlaces"
+        />
+      </SwiperSlide>
+    </Swiper>
+  </div>
 </template>
 
 <style scoped></style>
