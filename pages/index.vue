@@ -4,13 +4,14 @@ import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
 import EdProgramsSlider from '~/components/Sliders/EdProgramsSlider.vue'
 import PartnersSlider from '~/components/Sliders/PartnersSlider.vue'
 import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
+import ChooseEdProgram from '~/components/ChooseEdProgram.vue'
 </script>
 
 <template>
   <div>
     <div class="w-screen h-screen bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]">
       <section
-        class="max-w-screen-laptop-l mx-auto flex flex-col h-screen justify-between pt-52 pb-32"
+        class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 flex flex-col h-screen justify-between pt-52 pb-32"
       >
         <h1 class="max-w-[730px] text-7xl">
           <span class="font-black tracking-wide">Будущее начинается здесь:</span><br />
@@ -26,7 +27,7 @@ import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
       </section>
     </div>
   </div>
-  <div class="max-w-screen-laptop-l mx-auto">
+  <div class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0">
     <section class="mt-24 text-white">
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(31,48,255,0.9)]">Об институте</h2>
       <div class="mt-7 flex justify-between gap-10">
@@ -59,8 +60,10 @@ import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
       </div>
     </section>
     <section class="mt-40 text-white">
-      <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">Почему ИКНТ?</h2>
-      <div class="mt-16 flex flex-col gap-y-[500px]">
+      <h2 class="text-5xl font-black text-center drop-shadow-[0_0_10px_rgba(255,150,0,0.9)]">
+        Почему ИКНТ?
+      </h2>
+      <div class="mt-32 flex flex-col gap-y-[500px]">
         <div class="flex gap-10 px-10 flex-nowrap">
           <div class="w-1/2 pr-10">
             <h4 class="text-2xl font-bold tracking-wide leading-tight">
@@ -176,17 +179,11 @@ import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
       </div>
     </section>
     <section class="mt-52 text-white">
-      <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">
+      <h2 class="text-5xl font-black text-center drop-shadow-[0_0_16px_rgba(255,0,255,0.9)]">
         Образовательные программы
       </h2>
-      <div
-        class="mx-auto mt-12 rounded-lg border border-white border-opacity-30 bg-white bg-opacity-10 px-4 py-2 flex gap-5 w-fit"
-      >
-        <p>Бакалавриат</p>
-        <p>Магистратура</p>
-        <p>Специалитет</p>
-      </div>
-      <EdProgramsSlider class="py-10" />
+      <ChooseEdProgram />
+      <EdProgramsSlider class="py-10 w-full" />
     </section>
     <section class="mt-12 text-white">
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">Наши партнеры</h2>

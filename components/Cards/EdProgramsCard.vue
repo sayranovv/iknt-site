@@ -1,5 +1,6 @@
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue'
+const prop = defineProps<{
   letters3: string
   title: string
   programName: string
@@ -12,11 +13,21 @@ defineProps<{
   minScore: number
   budgetPlaces: number
 }>()
+
+const hoverColor = computed(() => ({
+  'before:to-blue-500 hover:border-blue-400 hover:shadow-[0px_0px_30px_5px_rgba(0,0,255,0.4)]':
+    prop.degree === 'Бакалавриат',
+  'before:to-fuchsia-500 hover:border-fuchsia-400 hover:shadow-[0px_0px_30px_5px_rgba(255,0,255,0.4)]':
+    prop.degree === 'Специалитет',
+  'before:to-orange-500 hover:border-orange-400 hover:shadow-[0px_0px_30px_5px_rgba(255,150,0,0.4)]':
+    prop.degree === 'Магистратура'
+}))
 </script>
 
 <template>
   <div
     class="relative p-5 pt-10 flex flex-col h-full items-center justify-between gap-8 border border-white border-opacity-20 rounded-xl bg-white bg-opacity-10 backdrop-blur-lg transition-all hover:shadow-[0px_0px_30px_5px_rgba(0,0,255,0.4)] hover:border-blue-400 before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:to-blue-500 before:opacity-0 hover:before:opacity-30"
+    :class="hoverColor"
   >
     <h2 class="text-8xl font-black my-10 hover:drop-shadow hover:shadow-blue-500">
       {{ letters3 }}

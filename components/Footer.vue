@@ -3,7 +3,7 @@ const logoColor = 'white'
 </script>
 
 <template>
-  <footer class="text-lg font-light">
+  <footer class="text-lg font-light max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0">
     <div class="flex justify-between items-center w-full">
       <nav class="flex flex-col items-start w-1/3">
         <NuxtLink to="/">Главная</NuxtLink>
