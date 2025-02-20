@@ -4,27 +4,29 @@ const logoColor = 'white'
 
 <template>
   <footer class="text-lg font-light">
-    <div class="flex justify-between items-center">
-      <nav class="flex flex-col items-start">
+    <div class="flex justify-between items-center w-full">
+      <nav class="flex flex-col items-start w-1/3">
         <NuxtLink to="/">Главная</NuxtLink>
-        <NuxtLink to="/">Новости</NuxtLink>
-        <NuxtLink to="/">Абитуриенту</NuxtLink>
-        <NuxtLink to="/">Преподаватели</NuxtLink>
-        <NuxtLink to="/">Об институте</NuxtLink>
-        <NuxtLink to="/">Контакты</NuxtLink>
+        <NuxtLink to="/news">Новости</NuxtLink>
+        <NuxtLink to="/applicant">Абитуриенту</NuxtLink>
+        <NuxtLink to="/professors">Преподаватели</NuxtLink>
+        <NuxtLink to="/about">Об институте</NuxtLink>
+        <NuxtLink to="/contact">Контакты</NuxtLink>
       </nav>
-      <div class="flex gap-3">
-        <a href="#"><img src="/logo/social/vk.svg" alt="" class="w-6" /></a>
-        <a href="#"><img src="/logo/social/tg.svg" alt="" class="w-6" /></a>
-        <a href="#"><img src="/logo/social/yt.svg" alt="" class="w-6" /></a>
+      <div class="w-1/3">
+        <div class="flex gap-3 justify-center">
+          <a href="#"><img src="/logo/social/vk.svg" alt="" class="w-6" /></a>
+          <a href="#"><img src="/logo/social/tg.svg" alt="" class="w-6" /></a>
+          <a href="#"><img src="/logo/social/yt.svg" alt="" class="w-6" /></a>
+        </div>
       </div>
-      <div class="flex flex-col items-start">
+      <div class="flex flex-col items-end w-1/3">
         <p class="flex gap-1"><img src="/icons/location.svg" /> Пермь, ул. Букирева, 15</p>
         <p class="flex gap-1"><img src="/icons/call.svg" /> +7 (342) XXX-XX-XX</p>
         <p class="flex gap-1"><img src="/icons/mail.svg" /> iknt@psu.ru</p>
       </div>
     </div>
-    <div class="mt-6">
+    <div class="mt-10">
       <NuxtLink to="/">
         <svg viewBox="0 0 408 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -197,7 +199,7 @@ const logoColor = 'white'
       </NuxtLink>
     </div>
     <div class="border-t border-white border-opacity-20 my-6 pt-4 text-center opacity-70">
-      © 2025 ИКНТ ПГНИУ | Разработка: <span class="hover:text-blue-400">Сайранов Эльдар</span>
+      © 2025 ИКНТ ПГНИУ | Разработка: <span>Сайранов Эльдар</span>
     </div>
   </footer>
 </template>

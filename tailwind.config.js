@@ -7,6 +7,15 @@ export default {
   prefix: '',
 
   theme: {
+    screens: {
+      'mobile-s': '320px',
+      'mobile-l': '435px',
+      tablet: '768px',
+      'laptop-s': '1024px',
+      'laptop-l': '1440px',
+      desktop: '1920px',
+      tv: '2560px'
+    },
     container: {
       center: true,
       padding: '2rem',

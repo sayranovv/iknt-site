@@ -1,32 +1,10 @@
 <script setup lang="ts">
+import { useNewsStore } from '@/stores/news.store'
 import NewsCard from '~/components/Cards/NewsCard.vue'
 
-const someNews = [
-  {
-    id: 1,
-    title: 'Первый выпуск специалистов',
-    category: '#newsIKNT',
-    description:
-      'Они были первыми: в Институте компьютерных наук и технологий состоялся первый выпуск специалистов',
-    img: '/assets/img/news/news1.jpg'
-  },
-  {
-    id: 2,
-    title: 'Первый выпуск специалистов',
-    category: '#newsIKNT',
-    description:
-      'Они были первыми: в Институте компьютерных наук и технологий состоялся первый выпуск специалистов',
-    img: '/assets/img/news/news1.jpg'
-  },
-  {
-    id: 3,
-    title: 'Первый выпуск специалистов',
-    category: '#newsIKNT',
-    description:
-      'Они были первыми: в Институте компьютерных наук и технологий состоялся первый выпуск специалистов',
-    img: '/assets/img/news/news1.jpg'
-  }
-]
+const newsStore = useNewsStore()
+
+const someNews = newsStore.news
 </script>
 
 <template>
@@ -44,7 +22,7 @@ const someNews = [
         v-for="news in someNews"
         :key="news.id"
         :title="news.title"
-        :category="news.category"
+        :category="news.tag"
         :description="news.description"
         :img="news.img"
       />

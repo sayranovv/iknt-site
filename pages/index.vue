@@ -3,26 +3,30 @@ import Test from '~/components/Three/test.vue'
 import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
 import EdProgramsSlider from '~/components/Sliders/EdProgramsSlider.vue'
 import PartnersSlider from '~/components/Sliders/PartnersSlider.vue'
+import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
 </script>
 
 <template>
   <div>
-    <div
-      class="absolute -z-10 w-screen h-screen left-0 top-0 bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]"
-    ></div>
-    <section class="text-white flex flex-col h-screen justify-between pt-28 pb-36">
-      <h1 class="max-w-[730px] text-7xl">
-        <span class="font-black tracking-wide">Будущее начинается здесь:</span><br />
-        Институт Компьютерных Наук и Технологий
-      </h1>
-      <p class="text-2xl max-w-3xl mt-6 font-normal">
-        Инновации, передовые технологии, лучшие преподаватели и перспективы для каждого студента
-      </p>
-      <div class="flex gap-6">
-        <Button>О нас</Button>
-        <Button>Поступить</Button>
-      </div>
-    </section>
+    <div class="w-screen h-screen bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]">
+      <section
+        class="max-w-screen-laptop-l mx-auto flex flex-col h-screen justify-between pt-52 pb-32"
+      >
+        <h1 class="max-w-[730px] text-7xl">
+          <span class="font-black tracking-wide">Будущее начинается здесь:</span><br />
+          Институт Компьютерных Наук и Технологий
+        </h1>
+        <p class="text-2xl max-w-3xl mt-6 font-normal">
+          Инновации, передовые технологии, лучшие преподаватели и перспективы для каждого студента
+        </p>
+        <div class="flex gap-6">
+          <Button>О нас</Button>
+          <Button>Поступить</Button>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="max-w-screen-laptop-l mx-auto">
     <section class="mt-24 text-white">
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(31,48,255,0.9)]">Об институте</h2>
       <div class="mt-7 flex justify-between gap-10">
@@ -42,9 +46,7 @@ import PartnersSlider from '~/components/Sliders/PartnersSlider.vue'
         </div>
 
         <div class="w-1/2">
-          <Badge />
-          <Badge />
-          <Badge />
+          <ProfessionsSliderBox />
         </div>
       </div>
     </section>
@@ -60,7 +62,7 @@ import PartnersSlider from '~/components/Sliders/PartnersSlider.vue'
       <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">Почему ИКНТ?</h2>
       <div class="mt-16 flex flex-col gap-y-[500px]">
         <div class="flex gap-10 px-10 flex-nowrap">
-          <div class="w-1/2">
+          <div class="w-1/2 pr-10">
             <h4 class="text-2xl font-bold tracking-wide leading-tight">
               Высококвалифицированный преподавательский состав
             </h4>

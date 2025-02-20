@@ -1,12 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="mx-auto max-w-screen-xl font-custom text-white">
+  <div class="w-full font-custom text-white">
     <Header class="mt-12" />
     <div>
       <slot />
     </div>
-    <Footer class="mt-12" />
+    <Footer class="mt-32" />
   </div>
 </template>
 

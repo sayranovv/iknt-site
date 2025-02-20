@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
-import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
 import { useEdProgramsStore } from '@/stores/edPrograms.store'
 
 const edProgramsStore = useEdProgramsStore()

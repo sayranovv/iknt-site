@@ -3,7 +3,9 @@ const logoColor = 'white'
 </script>
 
 <template>
-  <div class="w-full max-w-screen-xl flex justify-between items-center text-white">
+  <header
+    class="absolute w-full max-w-screen-laptop-l right-1/2 translate-x-1/2 px-3 tablet:px-5 laptop-l:px-0 flex justify-between items-center text-white"
+  >
     <NuxtLink to="/">
       <svg
         width="408"
@@ -180,15 +182,14 @@ const logoColor = 'white'
         />
       </svg>
     </NuxtLink>
-
-    <ul class="flex gap-8 text-lg font-bold">
-      <li>Новости</li>
-      <li>Абитуриенту</li>
-      <li>Преподаватели</li>
-      <li>О институте</li>
-      <li>Контакты</li>
-    </ul>
-  </div>
+    <nav class="flex gap-6 text-md mb-0.5">
+      <NuxtLink to="/news">Новости</NuxtLink>
+      <NuxtLink to="/applicant">Абитуриенту</NuxtLink>
+      <NuxtLink to="/professors">Преподаватели</NuxtLink>
+      <NuxtLink to="/about">Об институте</NuxtLink>
+      <NuxtLink to="/contact">Контакты</NuxtLink>
+    </nav>
+  </header>
 </template>
 
 <style scoped></style>
