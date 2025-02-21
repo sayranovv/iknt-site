@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  components: true,
   plugins: ['~/plugins/three.client.js'],
   modules: [
     '@nuxtjs/tailwindcss',

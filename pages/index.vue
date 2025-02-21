@@ -1,9 +1,4 @@
-<script setup lang="ts">
-import Test from '~/components/Three/test.vue'
-import EdProgramsSlider from '~/components/Sliders/EdProgramsSlider.vue'
-import PartnersSlider from '~/components/Sliders/PartnersSlider.vue'
-import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
@@ -19,8 +14,8 @@ import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
           Инновации, передовые технологии, лучшие преподаватели и перспективы для каждого студента
         </p>
         <div class="flex gap-6">
-          <Button>О нас</Button>
-          <Button>Поступить</Button>
+          <Button_P>О нас</Button_P>
+          <Button_P>Поступить</Button_P>
         </div>
       </section>
     </div>
@@ -45,7 +40,7 @@ import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
           </div>
 
           <div class="w-1/2">
-            <ProfessionsSliderBox />
+            <SlidersProfessionsSliderBox />
           </div>
         </div>
       </section>
@@ -182,13 +177,13 @@ import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
         <h2 class="text-5xl font-black text-center drop-shadow-[0_0_16px_rgba(255,0,255,0.9)]">
           Образовательные программы
         </h2>
-        <EdProgramsSlider />
+        <SlidersEdProgramsSlider />
       </section>
       <section class="mt-12 text-white">
         <h2 class="text-5xl text-center font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">
           Наши партнеры
         </h2>
-        <PartnersSlider class="mt-10" />
+        <SlidersPartnersSlider class="mt-10" />
       </section>
     </div>
   </div>

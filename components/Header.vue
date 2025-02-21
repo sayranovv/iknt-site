@@ -4,7 +4,7 @@ const logoColor = 'white'
 
 <template>
   <header
-    class="absolute w-full max-w-screen-laptop-l right-1/2 translate-x-1/2 px-3 tablet:px-5 laptop-l:px-0 flex justify-between items-center text-white"
+    class="absolute z-10 w-full max-w-screen-laptop-l right-1/2 translate-x-1/2 px-3 tablet:px-5 laptop-l:px-0 flex justify-between items-center text-white"
   >
     <NuxtLink to="/">
       <svg
