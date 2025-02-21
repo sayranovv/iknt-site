@@ -78,7 +78,7 @@ import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
               <div
                 class="absolute w-[400px] h-[400px] bg-blue-600 blur-[150px] rounded-full -right-12 top-1/2 -translate-y-1/2"
               ></div>
-              <Test class="absolute -right-12 top-1/2 -translate-y-1/2" />
+              <!--              <Test class="absolute -right-12 top-1/2 -translate-y-1/2" />-->
             </div>
           </div>
           <div class="flex gap-20 px-10 flex-nowrap">
@@ -185,7 +185,7 @@ import ProfessionsSliderBox from '~/components/Sliders/ProfessionsSliderBox.vue'
         <EdProgramsSlider />
       </section>
       <section class="mt-12 text-white">
-        <h2 class="text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">
+        <h2 class="text-5xl text-center font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">
           Наши партнеры
         </h2>
         <PartnersSlider class="mt-10" />
