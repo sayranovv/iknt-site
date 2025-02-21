@@ -8,24 +8,34 @@ const someNews = newsStore.news
 </script>
 
 <template>
-  <div class="mt-24 text-white">
-    <h1 class="text-center text-5xl font-black">Новости</h1>
-    <div
-      class="mx-auto mt-12 rounded-lg border border-white border-opacity-30 bg-white bg-opacity-10 px-4 py-2 flex gap-5 w-fit"
-    >
-      <p>Все</p>
-      <p>Исследования</p>
-      <p>Стажировки</p>
-    </div>
-    <div class="flex justify-between items-center flex-wrap mt-16">
-      <NewsCard
-        v-for="news in someNews"
-        :key="news.id"
-        :title="news.title"
-        :category="news.tag"
-        :description="news.description"
-        :img="news.img"
+  <div>
+    <div class="absolute h-screen w-screen">
+      <img
+        src="/bg/bg2_e.jpg"
+        alt="bg"
+        class="absolute -z-10 w-full h-3/5 object-cover object-bottom left-1/2 -translate-x-1/2"
       />
+    </div>
+    <div class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 pt-52">
+      <h1 class="text-center text-7xl font-bold">Новости</h1>
+      <div
+        class="mx-auto mt-12 rounded-lg border border-white border-opacity-30 bg-white bg-opacity-10 px-4 py-2 flex gap-5 w-fit"
+      >
+        <p>Все</p>
+        <p>Исследования</p>
+        <p>Стажировки</p>
+      </div>
+      <div class="mt-16 grid grid-cols-1 tablet:grid-cols-2 laptop-s:grid-cols-3 gap-x-5 gap-y-2">
+        <NewsCard
+          class=""
+          v-for="news in someNews"
+          :key="news.id"
+          :title="news.title"
+          :category="news.tag"
+          :description="news.description"
+          :img="news.img"
+        />
+      </div>
     </div>
   </div>
 </template>
