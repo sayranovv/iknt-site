@@ -182,12 +182,13 @@ const logoColor = 'white'
         />
       </svg>
     </NuxtLink>
-    <nav class="flex gap-6 text-md mb-0.5">
+    <nav class="flex gap-6 text-md items-center mb-0.5">
       <NuxtLink to="/news">Новости</NuxtLink>
       <NuxtLink to="/applicant">Абитуриенту</NuxtLink>
       <NuxtLink to="/professors">Преподаватели</NuxtLink>
       <NuxtLink to="/about">Об институте</NuxtLink>
       <NuxtLink to="/contact">Контакты</NuxtLink>
+      <FormModal />
     </nav>
   </header>
 </template>
