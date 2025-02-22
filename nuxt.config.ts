@@ -4,17 +4,18 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   components: true,
   plugins: ['~/plugins/three.client.js'],
-  modules: [
-    '@nuxtjs/tailwindcss',
-    'shadcn-nuxt',
-    '@nuxtjs/google-fonts',
-    '@pinia/nuxt',
-    '@formkit/auto-animate/nuxt'
-  ],
   shadcn: {
     prefix: 'Ui',
     componentDir: './components/ui'
   },
+  modules: [
+    'shadcn-nuxt',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+    '@pinia/nuxt',
+    '@formkit/auto-animate/nuxt',
+    '@nuxtjs/google-fonts'
+  ],
   googleFonts: {
     families: {
       Inter: [100, 300, 400, 500, 700, 900]
