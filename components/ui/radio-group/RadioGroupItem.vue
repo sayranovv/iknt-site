@@ -5,7 +5,7 @@ import {
   RadioGroupIndicator,
   RadioGroupItem,
   type RadioGroupItemProps,
-  useForwardProps,
+  useForwardProps
 } from 'reka-ui'
 import { computed, type HTMLAttributes } from 'vue'
 
@@ -26,12 +26,12 @@ const forwardedProps = useForwardProps(delegatedProps)
     :class="
       cn(
         'aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50',
-        props.class,
+        props.class
       )
     "
   >
     <RadioGroupIndicator class="flex items-center justify-center">
-      <CheckIcon class="h-3.5 w-3.5 text-primary" />
+      <CheckIcon class="h-3.5 w-3.5 text-primary text-white" />
     </RadioGroupIndicator>
   </RadioGroupItem>
 </template>
