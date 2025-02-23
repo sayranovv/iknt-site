@@ -41,28 +41,34 @@ const getAutoplay = (index: number) => {
 
 <template>
   <div class="overflow-hidden w-full py-5">
-    <Swiper
-      v-for="(direction, index) in professions"
-      :key="direction.id"
-      :slides-per-view="3"
-      :space-between="5"
-      :loop="true"
-      :loopedSlides="direction.list.length"
-      :autoplay="getAutoplay(index)"
-      :speed="4000"
-      :free-mode="true"
-      :allowTouchMove="false"
-      :modules="[Autoplay, FreeMode]"
-      class="swiper-container"
-    >
-      <SwiperSlide
-        v-for="profession in direction.list"
-        :key="profession"
-        class="mb-2 whitespace-nowrap"
+    <div class="overflow-hidden w-full py-5">
+      <Swiper
+        v-for="(direction, index) in professions"
+        :key="direction.id"
+        :slides-per-view="1.5"
+        :space-between="5"
+        :loop="true"
+        :loopedSlides="direction.list.length"
+        :autoplay="getAutoplay(index)"
+        :speed="6000"
+        :free-mode="true"
+        :allowTouchMove="false"
+        :modules="[Autoplay, FreeMode]"
+        :breakpoints="{
+          450: { slidesPerView: 2, speed: 4000 },
+          768: { slidesPerView: 3, speed: 4000 }
+        }"
+        class="swiper-container"
       >
-        <Badge :title="profession" />
-      </SwiperSlide>
-    </Swiper>
+        <SwiperSlide
+          v-for="profession in direction.list"
+          :key="profession"
+          class="mb-2 whitespace-nowrap"
+        >
+          <Badge :title="profession" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   </div>
 </template>
 

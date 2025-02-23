@@ -35,7 +35,7 @@ import { FreeMode, Autoplay } from 'swiper/modules'
 <template>
   <div class="overflow-hidden w-full py-5">
     <Swiper
-      :slides-per-view="4"
+      :slides-per-view="1.5"
       :space-between="30"
       :loop="true"
       :autoplay="{
@@ -45,11 +45,15 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       :speed="4000"
       :free-mode="true"
       :modules="[Autoplay, FreeMode]"
+      ,
+      :breakpoints="{
+        768: { slidesPerView: 4 }
+      }"
       class="swiper-container py-5 flex items-center justify-center"
     >
       <SwiperSlide v-for="logo in slider1Logos" :key="logo">
         <div
-          class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.5)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(255,0,0,0.5)] hover:border-red-400 hover:before:bg-red-500 cursor-pointer"
+          class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(255,0,0,0.5)] hover:border-red-400 hover:before:bg-red-500 cursor-pointer"
         >
           <img
             :src="'/partners_logo/' + logo"
@@ -60,7 +64,7 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       </SwiperSlide>
     </Swiper>
     <Swiper
-      :slides-per-view="4"
+      :slides-per-view="1.5"
       :space-between="30"
       :loop="true"
       :autoplay="{
@@ -71,11 +75,15 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       :speed="4000"
       :free-mode="true"
       :modules="[Autoplay, FreeMode]"
+      ,
+      :breakpoints="{
+        768: { slidesPerView: 4 }
+      }"
       class="swiper-container py-5"
     >
       <SwiperSlide v-for="logo in slider2Logos" :key="logo">
         <div
-          class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.5)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(255,255,0,0.5)] hover:border-yellow-400 hover:before:bg-yellow-500 cursor-pointer"
+          class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(255,255,0,0.5)] hover:border-yellow-400 hover:before:bg-yellow-500 cursor-pointer"
         >
           <img
             :src="'/partners_logo/' + logo"
@@ -86,7 +94,7 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       </SwiperSlide>
     </Swiper>
     <Swiper
-      :slides-per-view="4"
+      :slides-per-view="1.5"
       :space-between="30"
       :loop="true"
       :autoplay="{
@@ -96,11 +104,15 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       :speed="4000"
       :free-mode="true"
       :modules="[Autoplay, FreeMode]"
+      ,
+      :breakpoints="{
+        768: { slidesPerView: 4 }
+      }"
       class="swiper-container py-5 flex items-center justify-center"
     >
       <SwiperSlide v-for="logo in slider3Logos" :key="logo">
         <div
-          class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.5)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(0,0,255,0.5)] hover:border-violet-400 hover:before:bg-violet-500 cursor-pointer"
+          class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(0,0,255,0.5)] hover:border-violet-400 hover:before:bg-violet-500 cursor-pointer"
         >
           <img
             :src="'/partners_logo/' + logo"
