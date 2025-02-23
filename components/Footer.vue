@@ -7,13 +7,20 @@ const logoColor = 'white'
     <div class="absolute w-screen h-full -z-10">
       <img
         src="/bg/1.jpg"
+        alt="bg11"
+        class="relative tablet:hidden w-full h-[175%] -top-36 object-cover object-[40%] opacity-80"
+      />
+      <img
+        src="/bg/1.jpg"
         alt="bg1"
-        class="relative w-full h-[135%] -top-36 object-cover object-[50%_10%] opacity-90"
+        class="relative w-full h-[135%] -top-36 object-cover object-[50%_10%] opacity-80"
       />
     </div>
     <div class="text-lg font-light max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0">
-      <div class="flex justify-between items-center w-full">
-        <nav class="flex flex-col items-start w-1/3">
+      <div
+        class="flex justify-between items-center flex-wrap flex-col gap-6 tablet:flex-nowrap tablet:flex-row tablet:items-center"
+      >
+        <nav class="flex flex-col gap-1 items-center tablet:items-start tablet:w-1/3">
           <NuxtLink to="/">Главная</NuxtLink>
           <NuxtLink to="/news">Новости</NuxtLink>
           <NuxtLink to="/applicant">Абитуриенту</NuxtLink>
@@ -21,14 +28,14 @@ const logoColor = 'white'
           <NuxtLink to="/about">Об институте</NuxtLink>
           <NuxtLink to="/contact">Контакты</NuxtLink>
         </nav>
-        <div class="w-1/3">
+        <div class="tablet:w-1/3">
           <div class="flex gap-3 justify-center">
             <a href="#"><img src="/icons/social/vk.svg" alt="" class="w-6" /></a>
             <a href="#"><img src="/icons/social/tg.svg" alt="" class="w-6" /></a>
             <a href="#"><img src="/icons/social/yt.svg" alt="" class="w-6" /></a>
           </div>
         </div>
-        <div class="flex flex-col items-end w-1/3">
+        <div class="flex flex-col items-center tablet:items-end tablet:w-1/3">
           <p class="flex gap-1"><img src="/icons/location.svg" alt="" /> Пермь, ул. Букирева, 15</p>
           <p class="flex gap-1"><img src="/icons/call.svg" alt="" /> +7 (342) XXX-XX-XX</p>
           <p class="flex gap-1"><img src="/icons/mail.svg" alt="" /> iknt@psu.ru</p>
@@ -207,7 +214,9 @@ const logoColor = 'white'
         </NuxtLink>
       </div>
       <div class="border-t border-white border-opacity-20 mt-6 pt-4 text-center opacity-70">
-        © 2025 ИКНТ ПГНИУ | Разработка: <span>Сайранов Эльдар</span>
+        © 2025 ИКНТ ПГНИУ <span class="hidden tablet:visible">| </span
+        ><br class="visible tablet:hidden" />
+        Разработка: <span>Сайранов Эльдар</span>
       </div>
     </div>
   </footer>

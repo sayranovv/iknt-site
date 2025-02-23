@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div v-auto-animate class="w-full font-custom text-white overflow-x-hidden">
+  <div v-auto-animate class="w-full font-custom text-white overflow-hidden">
     <Header class="mt-12" />
     <div>
       <slot />

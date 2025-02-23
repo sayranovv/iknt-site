@@ -55,7 +55,7 @@ const getAutoplay = (index: number) => {
         :allowTouchMove="false"
         :modules="[Autoplay, FreeMode]"
         :breakpoints="{
-          450: { slidesPerView: 2, speed: 4000 },
+          470: { slidesPerView: 2, speed: 4000 },
           768: { slidesPerView: 3, speed: 4000 }
         }"
         class="swiper-container"
