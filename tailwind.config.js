@@ -2,8 +2,8 @@ const animate = require('tailwindcss-animate')
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  safelist: ['bg-blue-600', 'bg-fuchsia-600', 'bg-orange-600', 'dark'],
   darkMode: ['class'],
-  safelist: ['dark'],
   prefix: '',
 
   theme: {
