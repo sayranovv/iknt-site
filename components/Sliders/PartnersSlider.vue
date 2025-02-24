@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { ref, onUnmounted } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { FreeMode, Autoplay } from 'swiper/modules'
+
+const swiper1 = ref(null)
+const swiper2 = ref(null)
+const swiper3 = ref(null)
+
 const slider1Logos = [
   '1c.png',
   'alfa_bank.png',
@@ -28,13 +36,17 @@ const slider3Logos = [
   'positive_technologies.png'
 ]
 
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { FreeMode, Autoplay } from 'swiper/modules'
+onUnmounted(() => {
+  swiper1.value?.destroy()
+  swiper2.value?.destroy()
+  swiper3.value?.destroy()
+})
 </script>
 
 <template>
   <div class="overflow-hidden w-full py-5">
     <Swiper
+      ref="swiper1"
       :slides-per-view="1.5"
       :space-between="30"
       :loop="true"
@@ -45,13 +57,12 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       :speed="4000"
       :free-mode="true"
       :modules="[Autoplay, FreeMode]"
-      ,
       :breakpoints="{
         768: { slidesPerView: 4 }
       }"
       class="swiper-container py-5 flex items-center justify-center"
     >
-      <SwiperSlide v-for="logo in slider1Logos" :key="logo">
+      <SwiperSlide v-for="(logo, index) in slider1Logos" :key="`slider1-${index}`">
         <div
           class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(255,0,0,0.5)] hover:border-red-400 hover:before:bg-red-500 cursor-pointer"
         >
@@ -64,6 +75,7 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       </SwiperSlide>
     </Swiper>
     <Swiper
+      ref="swiper2"
       :slides-per-view="1.5"
       :space-between="30"
       :loop="true"
@@ -75,13 +87,12 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       :speed="4000"
       :free-mode="true"
       :modules="[Autoplay, FreeMode]"
-      ,
       :breakpoints="{
         768: { slidesPerView: 4 }
       }"
       class="swiper-container py-5"
     >
-      <SwiperSlide v-for="logo in slider2Logos" :key="logo">
+      <SwiperSlide v-for="(logo, index) in slider2Logos" :key="`slider1-${index}`">
         <div
           class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(255,255,0,0.5)] hover:border-yellow-400 hover:before:bg-yellow-500 cursor-pointer"
         >
@@ -94,6 +105,7 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       </SwiperSlide>
     </Swiper>
     <Swiper
+      ref="swiper3"
       :slides-per-view="1.5"
       :space-between="30"
       :loop="true"
@@ -104,13 +116,12 @@ import { FreeMode, Autoplay } from 'swiper/modules'
       :speed="4000"
       :free-mode="true"
       :modules="[Autoplay, FreeMode]"
-      ,
       :breakpoints="{
         768: { slidesPerView: 4 }
       }"
       class="swiper-container py-5 flex items-center justify-center"
     >
-      <SwiperSlide v-for="logo in slider3Logos" :key="logo">
+      <SwiperSlide v-for="(logo, index) in slider3Logos" :key="`slider1-${index}`">
         <div
           class="w-full h-24 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-80 shadow-[0px_0px_20px_5px_rgba(255,255,255,0.4)] backdrop-blur-lg transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-20 flex justify-center items-center hover:shadow-[0px_0px_20px_5px_rgba(0,0,255,0.5)] hover:border-violet-400 hover:before:bg-violet-500 cursor-pointer"
         >
