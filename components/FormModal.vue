@@ -272,9 +272,9 @@ const onSubmit = () => {
               <button
                 type="submit"
                 form="dialogForm"
-                class="mt-5 bg-white bg-opacity-20 border hover:bg-white hover:bg-opacity-100 rounded-md py-1"
+                class="text-md mt-5 text-white font-bold tracking-wide bg-white bg-opacity-10 border border-white border-opacity-20 py-2 px-5 rounded-lg hover:border-opacity-80 hover:border-white backdrop-blur-2xl transition-all before:absolute before:inset-0 before:bg-white before:rounded-lg before:opacity-0 hover:before:opacity-20"
               >
-                Save changes
+                Отправить заявку
               </button>
             </UiDialogFooter>
           </div>
