@@ -23,9 +23,9 @@ defineProps<{
         {{ description }}
       </p>
     </div>
-    <div class="relative w-full tablet:w-1/2 -z-10">
+    <div class="relative w-full tablet:w-1/2 z-10">
       <div
-        class="absolute w-[400px] h-[400px] blur-[150px] rounded-full top-1/2 -translate-y-1/2 right-1/2 tablet:right-44"
+        class="absolute w-[400px] h-[400px] blur-[90px] rounded-full top-1/2 -translate-y-1/2 right-1/2 tablet:right-44"
         :class="[
           `bg-${color}-600`,
           position === 'right' ? 'translate-x-1/2' : '-translate-x-1/2',
