@@ -1,8 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div v-auto-animate class="w-full font-custom text-white overflow-hidden">
-    <Header class="mt-12" />
+  <div class="w-full font-custom text-white">
+    <ThreePointsBg />
+
+    <Header class="mt-5 tablet:mt-12" />
     <div>
       <slot />
     </div>
