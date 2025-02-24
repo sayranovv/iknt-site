@@ -6,12 +6,12 @@ const logoColor = 'white'
   <footer class="relative">
     <div class="absolute w-screen h-full -z-10">
       <img
-        src="/bg/1.jpg"
+        src="/bg/1.png"
         alt="bg11"
         class="relative tablet:hidden w-full h-[175%] -top-36 object-cover object-[40%] opacity-80"
       />
       <img
-        src="/bg/1.jpg"
+        src="/bg/1.png"
         alt="bg1"
         class="relative w-full h-[135%] -top-36 object-cover object-[50%_10%] opacity-80"
       />
@@ -36,7 +36,7 @@ const logoColor = 'white'
           </div>
         </div>
         <div class="flex flex-col items-center tablet:items-end tablet:w-1/3">
-          <p class="flex gap-1"><img src="/icons/location.svg" alt="" /> Пермь, ул. Букирева, 15</p>
+          <p class="flex gap-1"><img src="/icons/location.svg" alt="" /> Пермь, ул. Генкеля, 8</p>
           <p class="flex gap-1"><img src="/icons/call.svg" alt="" /> +7 (342) XXX-XX-XX</p>
           <p class="flex gap-1"><img src="/icons/mail.svg" alt="" /> iknt@psu.ru</p>
         </div>

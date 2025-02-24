@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import WhySection from '~/components/WhySection.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
@@ -10,9 +8,10 @@ import WhySection from '~/components/WhySection.vue'
       >
         <div class="max-w-[730px] h-full flex flex-col justify-between">
           <h1 class="text-4xl leading-none tablet:text-7xl">
-            <span class="font-black tracking-wide text-5xl tablet:text-7xl"
-              >Будущее начинается здесь:</span
-            ><br />
+            <span class="font-black tracking-wide text-5xl tablet:text-7xl">
+              Будущее начинается здесь:
+            </span>
+            <br />
             Институт Компьютерных Наук и Технологий
           </h1>
           <p class="text-xl tablet:text-2xl max-w-3xl mt-6 font-normal">
