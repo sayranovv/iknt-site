@@ -2,11 +2,13 @@
 
 <template>
   <div>
-    <div class="w-screen h-screen bg-gradient-to-br from-[#150080] via-[#991F99] to-[#FFCC00]">
+    <div
+      class="w-screen tablet:h-screen -pb-12 bg-gradient-to-br from-[#0A0084] via-[#BF07A0] to-[#F88208]"
+    >
       <section
-        class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 h-screen pt-52 pb-32"
+        class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 h-full pt-36 pb-20 tablet:pt-52 tablet:pb-32"
       >
-        <div class="max-w-[730px] h-full flex flex-col justify-between">
+        <div class="max-w-[730px] h-full flex flex-col gap-10 justify-between">
           <h1 class="text-4xl leading-none tablet:text-7xl">
             <span class="font-black tracking-wide text-5xl tablet:text-7xl">
               Будущее начинается здесь:
@@ -26,7 +28,7 @@
     </div>
     <div class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0">
       <section class="mt-24 text-white">
-        <h2 class="text-4xl tablet:text-5xl font-black drop-shadow-[0_0_10px_rgba(31,48,255,0.9)]">
+        <h2 class="text-4xl tablet:text-5xl font-black drop-shadow-[0_0_6px_rgba(0,0,255,0.9)]">
           Об институте
         </h2>
         <div class="mt-7 flex flex-wrap laptop-s:flex-nowrap justify-between gap-10">
@@ -61,7 +63,7 @@
       <!--      </section>-->
       <section class="mt-40 text-white">
         <h2
-          class="text-4xl tablet:text-5xl font-black text-center drop-shadow-[0_0_10px_rgba(255,150,0,0.9)]"
+          class="text-4xl tablet:text-5xl font-black text-center drop-shadow-[0_0_6px_rgba(255,150,0,0.9)]"
         >
           Почему ИКНТ?
         </h2>
@@ -106,7 +108,7 @@
       </section>
       <section class="mt-52 text-white">
         <h2
-          class="text-4xl tablet:text-5xl font-black text-center drop-shadow-[0_0_16px_rgba(255,0,255,0.9)]"
+          class="text-4xl tablet:text-5xl font-black leading-none text-center drop-shadow-[0_0_6px_rgba(255,0,255,0.9)]"
         >
           Образовательные программы
         </h2>
