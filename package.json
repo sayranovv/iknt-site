@@ -36,5 +36,8 @@
     "vue": "latest",
     "vue-router": "latest",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/three": "^0.173.0"
   }
 }
