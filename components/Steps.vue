@@ -24,23 +24,45 @@ const steps = [
 </script>
 
 <template>
-  <div class="relative flex justify-between items-start gap-5">
-    <div
-      class="absolute top-14 left-1/2 -translate-x-1/2 w-5/6 h-1 bg-white bg-opacity-30 z-0"
-    ></div>
-    <div
-      class="relative flex flex-col gap-4 items-center w-1/4"
-      v-for="step in steps"
-      :key="step.id"
-    >
+  <div>
+    <div class="hidden tablet:flex relative justify-between items-start gap-5">
       <div
-        class="w-28 h-28 text-6xl font-black flex justify-center items-center rounded-full relative border-4 border-white border-opacity-20 bg-white bg-opacity-10 backdrop-blur-lg transition-all hover:shadow-[0px_0px_50px_20px_rgba(255,150,0,0.4)] hover:border-orange-500 before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:to-orange-500 before:opacity-0 hover:before:opacity-30 before:rounded-full cursor-pointer"
+        class="absolute top-14 left-1/2 -translate-x-1/2 w-5/6 h-1 bg-white bg-opacity-30 z-0"
+      ></div>
+      <div
+        class="relative flex flex-col gap-4 items-center w-1/4"
+        v-for="step in steps"
+        :key="step.id"
       >
-        {{ step.id }}
+        <div
+          class="w-28 h-28 text-6xl font-black flex justify-center items-center rounded-full relative border-4 border-white border-opacity-20 bg-white bg-opacity-10 backdrop-blur-lg transition-all hover:shadow-[0px_0px_50px_20px_rgba(255,150,0,0.4)] hover:border-orange-500 before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:to-orange-500 before:opacity-0 hover:before:opacity-30 before:rounded-full cursor-pointer"
+        >
+          {{ step.id }}
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-bold">{{ step.title }}</h3>
+          <p>{{ step.desc }}</p>
+        </div>
       </div>
-      <div class="text-center">
-        <h3 class="text-2xl font-bold">{{ step.title }}</h3>
-        <p>{{ step.desc }}</p>
+    </div>
+    <div class="relative flex tablet:hidden flex-col gap-8 items-start">
+      <div
+        class="absolute left-12 top-5 -translate-x-1/2 h-5/6 w-1 bg-white bg-opacity-30 z-0"
+      ></div>
+      <div
+        class="relative flex justify-between gap-4 items-center"
+        v-for="step in steps"
+        :key="step.id"
+      >
+        <div
+          class="w-24 h-24 text-4xl font-black flex justify-center items-center rounded-full relative border-4 border-white border-opacity-20 bg-white bg-opacity-10 backdrop-blur-lg transition-all hover:shadow-[0px_0px_50px_20px_rgba(255,150,0,0.4)] hover:border-orange-500 before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:to-orange-500 before:opacity-0 hover:before:opacity-30 before:rounded-full cursor-pointer"
+        >
+          {{ step.id }}
+        </div>
+        <div class="w-2/3">
+          <h3 class="text-2xl font-bold leading-tight">{{ step.title }}</h3>
+          <p>{{ step.desc }}</p>
+        </div>
       </div>
     </div>
   </div>
