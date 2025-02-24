@@ -16,8 +16,8 @@ const someNews = newsStore.news
         class="absolute -z-10 w-full h-3/5 object-cover object-bottom left-1/2 -translate-x-1/2"
       />
     </div>
-    <div class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 pt-52">
-      <h1 class="text-center text-7xl font-bold">Новости</h1>
+    <div class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 pt-40 tablet:pt-52">
+      <h1 class="text-center text-5xl tablet:text-7xl font-bold">Новости</h1>
       <div
         class="mx-auto mt-12 rounded-lg border border-white border-opacity-30 bg-white bg-opacity-10 px-4 py-2 flex gap-5 w-fit"
       >
