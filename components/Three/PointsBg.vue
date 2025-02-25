@@ -15,7 +15,6 @@ let windowHalfY: number
 
 const isClient = ref(false)
 
-// Выполняем код только на клиенте
 onMounted(() => {
   isClient.value = true
 
@@ -118,7 +117,7 @@ function render() {
 </script>
 
 <template>
-  <div class="fixed top-0 left-0 w-full h-full -z-10 bg-black bg-opacity-75"></div>
+  <div class="fixed top-0 left-0 w-full h-full -z-10 bg-black bg-opacity-80"></div>
 </template>
 
 <style scoped></style>
