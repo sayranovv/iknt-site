@@ -4,7 +4,7 @@ import VanillaTilt from 'vanilla-tilt'
 
 onMounted(() => {
   VanillaTilt.init(document.querySelectorAll('.img'), {
-    max: 25,
+    max: 35,
     speed: 400,
     glare: true,
     'max-glare': 0.5
