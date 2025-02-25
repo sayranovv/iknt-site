@@ -1,9 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-full font-custom text-white">
+  <div class="w-full font-custom text-white overflow-hidden">
     <ThreePointsBg />
-
     <Header class="mt-5 tablet:mt-12" />
     <div>
       <slot />
