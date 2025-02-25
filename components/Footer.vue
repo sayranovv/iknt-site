@@ -3,17 +3,19 @@ const logoColor = 'white'
 </script>
 
 <template>
-  <footer class="relative">
-    <div class="absolute w-screen h-full -z-10">
+  <footer class="relative overflow-hidden">
+    <div class="invisible tablet:visible absolute h-screen w-full">
       <img
         src="/bg/1.png"
-        alt="bg11"
-        class="relative tablet:hidden w-full h-[175%] -top-36 object-cover object-[40%] opacity-80"
+        alt="bg"
+        class="absolute -top-12 -z-10 w-full h-3/5 object-cover object-top left-1/2 -translate-x-1/2"
       />
+    </div>
+    <div class="visible tablet:invisible absolute inset-0">
       <img
         src="/bg/1.png"
-        alt="bg1"
-        class="relative w-full h-[135%] -top-36 object-cover object-[50%_10%] opacity-80"
+        alt="bg"
+        class="absolute -top-12 -z-10 h-[150%] object-cover object-top"
       />
     </div>
     <div class="text-lg font-light max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0">
@@ -213,7 +215,7 @@ const logoColor = 'white'
           </svg>
         </NuxtLink>
       </div>
-      <div class="border-t border-white border-opacity-20 mt-6 pt-4 text-center opacity-70">
+      <div class="border-t border-white border-opacity-20 mt-6 mb-3 pt-4 text-center opacity-70">
         © 2025 ИКНТ ПГНИУ <span class="hidden tablet:visible">| </span
         ><br class="visible tablet:hidden" />
         Разработка: <span>Сайранов Эльдар</span>
