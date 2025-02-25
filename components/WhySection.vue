@@ -1,9 +1,21 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import VanillaTilt from 'vanilla-tilt'
+
+onMounted(() => {
+  VanillaTilt.init(document.querySelectorAll('.img'), {
+    max: 25,
+    speed: 400,
+    glare: true,
+    'max-glare': 0.5
+  })
+})
 defineProps<{
   position: 'right' | 'left'
   title: string
   description: string
   color: 'blue' | 'fuchsia' | 'orange'
+  icon: string
 }>()
 </script>
 
@@ -12,7 +24,7 @@ defineProps<{
     class="flex tablet:gap-10 tablet:px-10 flex-nowrap"
     :class="position === 'left' ? 'flex-row-reverse' : 'flex-row'"
   >
-    <div class="tablet:w-1/2 tablet:pr-10">
+    <div class="relative w-2/3 tablet:w-1/2 tablet:pr-10 z-10">
       <h4 class="text-2xl font-bold tracking-wide leading-tight">
         {{ title }}
       </h4>
@@ -23,15 +35,49 @@ defineProps<{
         {{ description }}
       </p>
     </div>
-    <div class="relative w-full tablet:w-1/2 z-10">
+
+    <!--    <div class="relative w-full tablet:w-1/2 z-10">-->
+    <!--      <div-->
+    <!--        class="absolute w-[450px] h-[450px] blur-[60px] rounded-full top-1/2 -translate-y-1/2 right-1/2 tablet:right-52"-->
+    <!--        :class="[-->
+    <!--          `bg-${color}-600`,-->
+    <!--          position === 'right' ? 'translate-x-1/2' : '-translate-x-1/2',-->
+    <!--          position === 'left' ? 'left-36' : ''-->
+    <!--        ]"-->
+    <!--      ></div>-->
+    <!--      <div>-->
+    <!--        <img-->
+    <!--          :src="'/icons/' + icon + '.svg'"-->
+    <!--          alt="sdf"-->
+    <!--          class="img absolute w-[320px] h-[320px] right-1/2 tablet:right-14 -top-20 drop-shadow-[0_0_8px_rgba(0,0,0,0.6)]"-->
+    <!--          :class="[-->
+    <!--            position === 'right' ? 'translate-x-1/2' : '-translate-x-1/2',-->
+    <!--            position === 'left' ? '-left-7' : ''-->
+    <!--          ]"-->
+    <!--        />-->
+    <!--      </div>-->
+    <!--    </div>-->
+
+    <div class="relative w-1/3 tablet:w-1/2">
       <div
-        class="absolute w-[400px] h-[400px] blur-[90px] rounded-full top-1/2 -translate-y-1/2 right-1/2 tablet:right-44"
+        class="absolute w-[450px] h-[450px] -z-10 blur-[60px] rounded-full top-1/2 -translate-y-1/2 right-1/2 tablet:right-52"
         :class="[
           `bg-${color}-600`,
           position === 'right' ? 'translate-x-1/2' : '-translate-x-1/2',
-          position === 'left' ? 'left-28' : ''
+          position === 'left' ? 'left-36' : ''
         ]"
       ></div>
+      <div>
+        <img
+          :src="'/icons/' + icon + '.svg'"
+          alt="sdf"
+          class="img absolute w-[100px] tablet:w-[320px] h-[100px] tablet:h-[320px] right-5 tablet:right-14 top-5 tablet:-top-20 drop-shadow-[0_0_8px_rgba(0,0,0,0.6)]"
+          :class="[
+            position === 'right' ? 'translate-x-1/2' : '-translate-x-1/2',
+            position === 'left' ? 'left-4 tablet:-left-7 ' : ''
+          ]"
+        />
+      </div>
     </div>
   </div>
 </template>

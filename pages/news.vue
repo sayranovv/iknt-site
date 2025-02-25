@@ -9,7 +9,7 @@ const someNews = newsStore.news
 
 <template>
   <div>
-    <div class="absolute h-screen w-screen">
+    <div class="absolute h-screen w-full">
       <img
         src="/bg/bg2_e.png"
         alt="bg"
@@ -27,12 +27,12 @@ const someNews = newsStore.news
       </div>
       <div class="mt-16 grid grid-cols-1 tablet:grid-cols-2 laptop-s:grid-cols-3 gap-x-5 gap-y-2">
         <NewsCard
-          class=""
           v-for="news in someNews"
           :key="news.id"
           :title="news.title"
           :category="news.tag"
           :description="news.description"
+          :descriptionFull="news.descriptionFull"
           :img="news.img"
         />
       </div>
