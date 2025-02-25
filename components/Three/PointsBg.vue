@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
 import * as THREE from 'three'
 import Stats from 'three/addons/libs/stats.module.js'
+import { onMounted, ref, defineEmits } from 'vue'
 
 let camera: THREE.PerspectiveCamera
 let scene: THREE.Scene
@@ -12,10 +12,13 @@ let mouseX = 0,
   mouseY = 0
 let windowHalfX: number
 let windowHalfY: number
-
 const isClient = ref(false)
 
+const emit = defineEmits(['loading', 'loaded'])
+const isLoading = ref(true)
+
 onMounted(() => {
+  emit('loading', true)
   isClient.value = true
 
   if (typeof window === 'undefined') return
@@ -24,6 +27,8 @@ onMounted(() => {
   windowHalfY = window.innerHeight / 2
 
   init()
+  isLoading.value = false
+  emit('loaded')
 })
 
 function init() {
@@ -59,7 +64,7 @@ function init() {
   const particles = new THREE.Points(geometry, material)
   scene.add(particles)
 
-  renderer = new THREE.WebGLRenderer()
+  renderer = new THREE.WebGLRenderer({ alpha: true })
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setAnimationLoop(animate)
@@ -70,6 +75,7 @@ function init() {
   renderer.domElement.style.width = '100%'
   renderer.domElement.style.height = '100%'
   renderer.domElement.style.zIndex = '-11' // Делаем фоном
+  renderer.domElement.style.pointerEvents = 'none'
   document.body.appendChild(renderer.domElement)
 
   stats = new Stats()
@@ -117,7 +123,9 @@ function render() {
 </script>
 
 <template>
-  <div class="fixed top-0 left-0 w-full h-full -z-10 bg-black bg-opacity-75"></div>
+  <div
+    class="fixed top-0 left-0 w-full h-full -z-10 bg-black bg-opacity-75 pointer-events-none"
+  ></div>
 </template>
 
 <style scoped></style>

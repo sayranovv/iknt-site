@@ -2,7 +2,7 @@
 import * as THREE from 'three'
 import Stats from 'three/addons/libs/stats.module.js'
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js'
-import { onMounted, ref } from 'vue'
+import { defineEmits, onMounted, ref } from 'vue'
 
 const manager = new THREE.LoadingManager()
 
@@ -11,8 +11,8 @@ let mixer
 
 let windowHalfX: number
 let windowHalfY: number
-
 const isClient = ref(false)
+
 const clock = new THREE.Clock()
 
 const params = {

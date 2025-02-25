@@ -1,11 +1,9 @@
-<script setup lang="ts">
-import DancingRobot from '~/components/Three/DancingRobot.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="overflow-x-hidden">
     <div class="relative">
-      <DancingRobot />
+      <ThreeDancingRobot />
     </div>
     <div
       class="w-screen tablet:h-screen -pb-12 bg-gradient-to-br from-[#0A0084] via-[#BF07A0] to-[#F88208]"
@@ -53,7 +51,7 @@ import DancingRobot from '~/components/Three/DancingRobot.vue'
             <p class="font-bold">Будущее технологий создаётся здесь! 🚀</p>
           </div>
 
-          <div class="w-full laptop-s:w-1/2">
+          <div class="w-[108%] -ml-3 tablet:w-full tablet:-ml-0 laptop-s:w-1/2">
             <SlidersProfessionsSliderBox />
           </div>
         </div>
