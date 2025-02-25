@@ -4,7 +4,7 @@
   <div>
     <div class="absolute h-screen w-screen">
       <img
-        src="/bg/bg3.jpg"
+        src="/bg/bg3.png"
         alt="bg"
         class="absolute -z-10 w-full h-3/5 object-cover object-bottom left-1/2 -translate-x-1/2"
       />

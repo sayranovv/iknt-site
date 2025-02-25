@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DancingRobot from '~/components/Three/DancingRobot.vue'
+</script>
 
 <template>
-  <div>
+  <div class="overflow-x-hidden">
+    <div class="relative">
+      <DancingRobot />
+    </div>
     <div
       class="w-screen tablet:h-screen -pb-12 bg-gradient-to-br from-[#0A0084] via-[#BF07A0] to-[#F88208]"
     >
@@ -120,7 +125,11 @@
         >
           Наши партнеры
         </h2>
-        <SlidersPartnersSlider class="mt-10" />
+        <div class="my-10 backdrop-blur-md flex flex-col">
+          <SlidersPartnersSlider :min-id="0" :max-id="6" />
+          <SlidersPartnersSlider :min-id="7" :max-id="13" :reversed="true" />
+          <SlidersPartnersSlider :min-id="14" :max-id="19" />
+        </div>
       </section>
     </div>
   </div>

@@ -11,7 +11,7 @@ const someNews = newsStore.news
   <div>
     <div class="absolute h-screen w-screen">
       <img
-        src="/bg/bg2_e.jpg"
+        src="/bg/bg2_e.png"
         alt="bg"
         class="absolute -z-10 w-full h-3/5 object-cover object-bottom left-1/2 -translate-x-1/2"
       />
