@@ -5,10 +5,6 @@ defineProps<{
   description: string
   img: string
 }>()
-
-const onClickMoreButton = (): void => {
-  console.log('yup')
-}
 </script>
 
 <template>
