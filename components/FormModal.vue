@@ -26,7 +26,7 @@ const onSubmit = () => {
     <UiDialog>
       <UiDialogTrigger as-child>
         <button
-          class="text-md font-bold tracking-wide bg-white bg-opacity-10 border-2 border-white border-opacity-20 py-2 px-5 rounded-full hover:border-opacity-80 relative z-0 hover:z-10 hover:border-white hover:shadow-[0px_0px_30px_10px_rgba(255,255,255,0.2)] backdrop-blur-2xl transition-all before:absolute before:inset-0 before:bg-white before:rounded-full before:opacity-0 hover:before:opacity-20"
+          class="outline-none text-md font-bold tracking-wide bg-white bg-opacity-10 border-2 border-white border-opacity-20 py-2 px-5 rounded-full hover:border-opacity-80 relative z-0 hover:z-10 hover:border-white hover:shadow-[0px_0px_30px_10px_rgba(255,255,255,0.2)] backdrop-blur-2xl transition-all before:absolute before:inset-0 before:bg-white before:rounded-full before:opacity-0 hover:before:opacity-20"
         >
           Подать заявку
         </button>
@@ -278,7 +278,9 @@ const onSubmit = () => {
               </button>
             </UiDialogFooter>
           </div>
-          <div v-else>"Successfully"</div>
+          <div v-else class="mt-24">
+            <h2 class="text-white text-center text-3xl font-bold">Заявка успешно отправлена!</h2>
+          </div>
         </UiScrollArea>
       </UiDialogContent>
     </UiDialog>
