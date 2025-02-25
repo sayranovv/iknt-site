@@ -6,6 +6,7 @@ const logoColor = 'white'
   <footer class="relative overflow-hidden">
     <div class="invisible tablet:visible absolute h-screen w-full">
       <img
+        loading="lazy"
         src="/bg/1.png"
         alt="bg"
         class="absolute -top-12 -z-10 w-full h-3/5 object-cover object-top left-1/2 -translate-x-1/2"
@@ -13,16 +14,17 @@ const logoColor = 'white'
     </div>
     <div class="visible tablet:invisible absolute inset-0">
       <img
+        loading="lazy"
         src="/bg/1.png"
         alt="bg"
-        class="absolute -top-12 -z-10 h-[150%] object-cover object-top"
+        class="absolute -top-12 -z-10 h-[150%] object-cover object-top opacity-80"
       />
     </div>
-    <div class="text-lg font-light max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0">
-      <div
-        class="flex justify-between items-center flex-wrap flex-col gap-6 tablet:flex-nowrap tablet:flex-row tablet:items-center"
-      >
-        <nav class="flex flex-col gap-1 items-center tablet:items-start tablet:w-1/3">
+    <div
+      class="relative z-10 text-lg font-light max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0"
+    >
+      <div class="flex justify-between items-end tablet:items-center gap-6 flex-nowrap">
+        <nav class="flex flex-col gap-1 items-start tablet:w-1/3">
           <NuxtLink to="/">Главная</NuxtLink>
           <NuxtLink to="/news">Новости</NuxtLink>
           <NuxtLink to="/applicant">Абитуриенту</NuxtLink>
@@ -30,19 +32,31 @@ const logoColor = 'white'
           <NuxtLink to="/about">Об институте</NuxtLink>
           <NuxtLink to="/contact">Контакты</NuxtLink>
         </nav>
-        <div class="tablet:w-1/3">
-          <div class="flex gap-3 justify-center">
-            <a href="#"><img src="/icons/social/vk.svg" alt="" class="w-6" /></a>
-            <a href="#"><img src="/icons/social/tg.svg" alt="" class="w-6" /></a>
-            <a href="#"><img src="/icons/social/yt.svg" alt="" class="w-6" /></a>
+        <div class="hidden tablet:block tablet:w-1/3">
+          <div class="flex gap-5 justify-center">
+            <a href="#"><img loading="lazy" src="/icons/social/vk.svg" alt="" class="w-6" /></a>
+            <a href="#"><img loading="lazy" src="/icons/social/tg.svg" alt="" class="w-6" /></a>
+            <a href="#"><img loading="lazy" src="/icons/social/yt.svg" alt="" class="w-6" /></a>
           </div>
         </div>
-        <div class="flex flex-col items-center tablet:items-end tablet:w-1/3">
-          <p class="flex gap-1"><img src="/icons/location.svg" alt="" /> Пермь, ул. Генкеля, 8</p>
-          <p class="flex gap-1"><img src="/icons/call.svg" alt="" /> +7 (342) XXX-XX-XX</p>
-          <p class="flex gap-1"><img src="/icons/mail.svg" alt="" /> iknt@psu.ru</p>
+        <div class="flex flex-col gap-1 items-end w-full tablet:w-1/3">
+          <p class="flex gap-1">
+            <img loading="lazy" src="/icons/location.svg" alt="" /> Пермь, ул. Генкеля, 8
+          </p>
+          <p class="flex gap-1">
+            <img loading="lazy" src="/icons/call.svg" alt="" /> +7 (342) 239-67-20
+          </p>
+          <p class="flex gap-1"><img loading="lazy" src="/icons/mail.svg" alt="" /> iknt@psu.ru</p>
         </div>
       </div>
+      <div class="tablet:hidden tablet:w-1/3">
+        <div class="flex mt-5 gap-6 justify-center">
+          <a href="#"><img loading="lazy" src="/icons/social/vk.svg" alt="" class="w-6" /></a>
+          <a href="#"><img loading="lazy" src="/icons/social/tg.svg" alt="" class="w-6" /></a>
+          <a href="#"><img loading="lazy" src="/icons/social/yt.svg" alt="" class="w-6" /></a>
+        </div>
+      </div>
+
       <div class="mt-10">
         <NuxtLink to="/">
           <svg viewBox="0 0 408 48" fill="none" xmlns="http://www.w3.org/2000/svg">

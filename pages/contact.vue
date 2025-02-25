@@ -6,7 +6,7 @@
       <img
         src="/bg/bg3.png"
         alt="bg"
-        class="absolute -z-10 w-full h-3/5 object-cover object-bottom left-1/2 -translate-x-1/2"
+        class="absolute -z-10 w-full h-2/5 tablet:h-3/5 object-cover object-bottom left-1/2 -translate-x-1/2"
       />
     </div>
     <div class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 pt-40 tablet:pt-52">

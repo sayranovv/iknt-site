@@ -14,7 +14,7 @@ defineProps<{
     </UiDialogTrigger>
     <UiDialogContent class="h-full tablet:h-auto tablet:max-w-[700px] text-white">
       <UiScrollArea class="h-full tablet:h-[700px] pt-10 px-5 pb-5 rounded-md">
-        <img :src="img" alt="news" class="rounded-lg w-full object-cover" />
+        <img loading="lazy" :src="img" alt="news" class="rounded-lg w-full object-cover" />
         <div class="mt-3 h-1/2 flex flex-col justify-between items-start gap-5">
           <p class="opacity-50 font-light">{{ category }}</p>
           <h2 class="text-3xl font-bold">{{ title }}</h2>

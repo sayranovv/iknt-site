@@ -223,11 +223,11 @@ const logoColor = 'white'
       </NuxtLink>
     </div>
     <nav class="hidden laptop-s:flex flex-wrap gap-6 text-md items-center mb-0.5">
-      <NuxtLink to="/news">Новости</NuxtLink>
-      <NuxtLink to="/applicant">Абитуриенту</NuxtLink>
-      <NuxtLink to="/professors">Преподаватели</NuxtLink>
-      <NuxtLink to="/about">Об институте</NuxtLink>
-      <NuxtLink to="/contact">Контакты</NuxtLink>
+      <NuxtLink to="/news" class="hover:border-b transition-all">Новости</NuxtLink>
+      <NuxtLink to="/applicant" class="hover:border-b transition-all">Абитуриенту</NuxtLink>
+      <NuxtLink to="/professors" class="hover:border-b transition-all">Преподаватели</NuxtLink>
+      <NuxtLink to="/about" class="hover:border-b transition-all">Об институте</NuxtLink>
+      <NuxtLink to="/contact" class="hover:border-b transition-all">Контакты</NuxtLink>
       <FormModal />
     </nav>
     <div class="visible laptop-s:hidden">

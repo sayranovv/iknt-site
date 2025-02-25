@@ -252,7 +252,7 @@ const buttonClick = (tab: string): void => {
         class="mySwiper py-10"
       >
         <SwiperSlide
-          class="w-full tablet:w-1/2 laptop-s:w-1/3 h-[900px]"
+          class="w-full tablet:w-1/2 laptop-s:w-1/3 h-2/3 tablet:h-[900px]"
           v-for="program in edProgramsStore.filteredPrograms"
           :key="program.id"
         >

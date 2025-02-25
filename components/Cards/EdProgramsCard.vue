@@ -26,10 +26,10 @@ const hoverColor = computed(() => ({
 
 <template>
   <div
-    class="relative p-5 pt-10 flex flex-col h-full items-center justify-between gap-8 border border-white border-opacity-20 rounded-xl bg-white bg-opacity-10 backdrop-blur-lg transition-all hover:shadow-[0px_0px_30px_5px_rgba(0,0,255,0.4)] hover:border-blue-400 before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:to-blue-500 before:opacity-0 hover:before:opacity-30 before:rounded-xl"
+    class="relative p-5 pt-10 flex flex-col gap-5 tablet:gap-8 h-full items-center justify-start tablet:justify-between border border-white border-opacity-20 rounded-xl bg-white bg-opacity-10 backdrop-blur-lg transition-all hover:shadow-[0px_0px_30px_5px_rgba(0,0,255,0.4)] hover:border-blue-400 before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:to-blue-500 before:opacity-0 hover:before:opacity-30 before:rounded-xl"
     :class="hoverColor"
   >
-    <h2 class="text-8xl font-black my-10 hover:drop-shadow hover:shadow-blue-500">
+    <h2 class="text-8xl font-black my-4 tablet:my-10 hover:drop-shadow hover:shadow-blue-500">
       {{ letters3 }}
     </h2>
     <h3 class="text-3xl text-center">{{ title }}</h3>

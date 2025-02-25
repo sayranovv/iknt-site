@@ -4,57 +4,57 @@ const professors = [
     id: 0,
     name: 'Городилов Алексей Юрьевич',
     description: 'Преподаватель предметов "Алгоритмы и структуры данных" и "Дискретная математика"',
-    img: '/img/professors/городилов.jpg'
+    img: 'https://i.postimg.cc/KvRSy5xW/image.jpg'
   },
   {
     id: 1,
     name: 'Кетова Валерия Дмитриевна',
     description:
       'Преподаватель предметов "Основы IT-технологий" и "Основы проектной деятельности в IT-сфере"',
-    img: '/img/professors/кетова.jpg'
+    img: 'https://i.postimg.cc/KYXyfgXH/image.jpg'
   },
   {
     id: 2,
     name: 'Кнутова Наталия Сергеевна',
     description: 'Преподаватель предмета "Язык программирования Python"',
-    img: '/img/professors/кнутова.jpg'
+    img: 'https://i.postimg.cc/sXmd36Mk/image.jpg'
   },
   {
     id: 3,
     name: 'Лабутин Иван Александрович',
     description:
       'Преподаватель предметов "Алгоритмы и структуры данных" и "Язык программирования Python"',
-    img: '/img/professors/лабутин.jpg'
+    img: 'https://i.postimg.cc/B6BsXZVw/image.jpg'
   },
   {
     id: 4,
     name: 'Шеина Татьяна Юрьевна',
     description: 'Преподаватель предмета "Основы web-технологий"',
-    img: '/img/professors/шеина.jpg'
+    img: 'https://i.postimg.cc/hPjgtBbp/image.jpg'
   },
   {
     id: 5,
     name: 'Гоберман Наталья Харисовна',
     description: 'Преподаватель предмета "Прикладная физическая культура"',
-    img: '/img/professors/гоберман.jpg'
+    img: 'https://i.postimg.cc/xCvjM3c5/image.jpg'
   },
   {
     id: 6,
     name: 'Дураков Андрей Викторович',
     description: 'Преподаватель предмета "Введение в математику"',
-    img: '/img/professors/дураков.jpg'
+    img: 'https://i.postimg.cc/yxnVr6hS/image.jpg'
   },
   {
     id: 7,
     name: 'Койкова Елена Семеновна',
     description: 'Преподаватель предмета "Английский язык"',
-    img: '/img/professors/койкова.jpg'
+    img: 'https://i.postimg.cc/7PNYLXvY/image.jpg'
   },
   {
     id: 8,
     name: 'Аверин Сергей Игоревич',
     description: 'Преподаватель предмета "История России"',
-    img: '/img/professors/аверин.jpg'
+    img: 'https://i.postimg.cc/Hkdwy6nZ/image.jpg'
   }
 ]
 </script>
@@ -65,7 +65,7 @@ const professors = [
       <img
         src="/bg/bg2_e.png"
         alt="bg"
-        class="absolute -z-10 w-full h-3/5 object-cover object-bottom left-1/2 -translate-x-1/2"
+        class="absolute -z-10 w-full h-2/5 tablet:h-3/5 object-cover object-bottom left-1/2 -translate-x-1/2"
       />
     </div>
     <div class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 pt-40 tablet:pt-52">

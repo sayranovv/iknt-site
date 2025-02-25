@@ -1,4 +1,30 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useHead } from '#imports'
+
+useHead({
+  title: 'Институт Компьютерных Наук и Технологий ПГНИУ',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Официальный сайт ИКНТ ПГНИУ. Новости, информация для абитуриентов, преподаватели и контакты.'
+    },
+    {
+      name: 'keywords',
+      content: 'ИКНТ, ПГНИУ, институт компьютерных наук, IT, абитуриент, преподаватели'
+    },
+    { name: 'author', content: 'ИКНТ ПГНИУ' },
+    { property: 'og:title', content: 'ИКНТ ПГНИУ' },
+    {
+      property: 'og:description',
+      content:
+        'Добро пожаловать на официальный сайт Института Компьютерных Наук и Технологий ПГНИУ!'
+    },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://iknt.site.vercel.app/' }
+  ]
+})
+</script>
 
 <template>
   <div class="overflow-x-hidden">
@@ -9,7 +35,7 @@
       class="w-screen tablet:h-screen -pb-12 bg-gradient-to-br from-[#0A0084] via-[#BF07A0] to-[#F88208]"
     >
       <section
-        class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 h-full pt-36 pb-20 tablet:pt-52 tablet:pb-32"
+        class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 h-screen tablet:h-full pt-36 pb-20 tablet:pt-52 tablet:pb-32"
       >
         <div class="max-w-[730px] h-full flex flex-col gap-10 justify-between">
           <h1 class="text-4xl leading-none tablet:text-7xl">
