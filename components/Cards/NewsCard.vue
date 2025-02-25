@@ -3,6 +3,7 @@ defineProps<{
   title: string
   category: string
   description: string
+  descriptionFull: string
   img: string
 }>()
 </script>
@@ -14,7 +15,12 @@ defineProps<{
       <p class="opacity-50 font-light">{{ category }}</p>
       <h2 class="text-3xl font-bold">{{ title }}</h2>
       <p class="opacity-50 font-light">{{ description }}</p>
-      <button class="border-b mt-4">Подробнее</button>
+      <NewsModal
+        :title="title"
+        :category="category"
+        :descriptionFull="descriptionFull"
+        :img="img"
+      />
     </div>
   </div>
 </template>
