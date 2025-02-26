@@ -25,7 +25,9 @@ const someNews = newsStore.news
         <p>Исследования</p>
         <p>Стажировки</p>
       </div>
-      <div class="mt-16 grid grid-cols-1 tablet:grid-cols-2 laptop-s:grid-cols-3 gap-x-5 gap-y-2">
+      <div
+        class="mt-16 grid grid-cols-1 tablet:grid-cols-2 laptop-s:grid-cols-3 gap-x-5 gap-y-10 tablet:gap-y-2"
+      >
         <CardsNewsCard
           v-for="news in someNews"
           :key="news.id"

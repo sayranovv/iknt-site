@@ -51,7 +51,7 @@ const getAutoplay = (index: number) => {
         :loopedSlides="direction.list.length"
         :autoplay="getAutoplay(index)"
         :speed="6000"
-        :free-mode="true"
+        :free-mode="false"
         :allowTouchMove="false"
         :modules="[Autoplay, FreeMode]"
         :breakpoints="{

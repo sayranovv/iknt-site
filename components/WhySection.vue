@@ -72,10 +72,10 @@ defineProps<{
           loading="lazy"
           :src="'/icons/' + icon + '.svg'"
           alt="sdf"
-          class="img absolute w-[100px] tablet:w-[320px] h-[100px] tablet:h-[320px] right-5 tablet:right-14 top-5 tablet:-top-20 drop-shadow-[0_0_8px_rgba(0,0,0,0.6)]"
+          class="img absolute w-[100px] tablet:w-[320px] h-[100px] tablet:h-[320px] right-3 tablet:right-12 top-10 tablet:-top-24 drop-shadow-[0_0_8px_rgba(0,0,0,0.6)]"
           :class="[
             position === 'right' ? 'translate-x-1/2' : '-translate-x-1/2',
-            position === 'left' ? 'left-4 tablet:-left-7 ' : ''
+            position === 'left' ? 'left-1 tablet:-left-7 ' : ''
           ]"
         />
       </div>

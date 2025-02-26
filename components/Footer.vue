@@ -23,7 +23,9 @@ const logoColor = 'white'
     <div
       class="relative z-10 text-lg font-light max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0"
     >
-      <div class="flex justify-between items-end tablet:items-center gap-6 flex-nowrap">
+      <div
+        class="flex justify-between items-end tablet:items-center gap-6 flex-nowrap text-sm min-[400px]:text-lg"
+      >
         <nav class="flex flex-col gap-1 items-start tablet:w-1/3">
           <NuxtLink to="/">Главная</NuxtLink>
           <NuxtLink to="/news">Новости</NuxtLink>
@@ -47,13 +49,13 @@ const logoColor = 'white'
             <img loading="lazy" src="/icons/call.svg" alt="" /> +7 (342) 239-67-20
           </p>
           <p class="flex gap-1"><img loading="lazy" src="/icons/mail.svg" alt="" /> iknt@psu.ru</p>
-        </div>
-      </div>
-      <div class="tablet:hidden tablet:w-1/3">
-        <div class="flex mt-5 gap-6 justify-center">
-          <a href="#"><img loading="lazy" src="/icons/social/vk.svg" alt="" class="w-6" /></a>
-          <a href="#"><img loading="lazy" src="/icons/social/tg.svg" alt="" class="w-6" /></a>
-          <a href="#"><img loading="lazy" src="/icons/social/yt.svg" alt="" class="w-6" /></a>
+          <div class="tablet:hidden tablet:w-1/3">
+            <div class="flex mt-5 gap-6 justify-center">
+              <a href="#"><img loading="lazy" src="/icons/social/vk.svg" alt="" class="w-6" /></a>
+              <a href="#"><img loading="lazy" src="/icons/social/tg.svg" alt="" class="w-6" /></a>
+              <a href="#"><img loading="lazy" src="/icons/social/yt.svg" alt="" class="w-6" /></a>
+            </div>
+          </div>
         </div>
       </div>
 

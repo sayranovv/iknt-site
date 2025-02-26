@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '#imports'
+import CurrentDate from '~/components/CurrentDate.vue'
 
 useHead({
   title: 'Институт Компьютерных Наук и Технологий ПГНИУ',
@@ -37,6 +38,7 @@ useHead({
       <section
         class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 h-screen tablet:h-full pt-36 pb-20 tablet:pt-52 tablet:pb-32"
       >
+        <CurrentDate class="mb-2" />
         <div class="max-w-[730px] h-full flex flex-col gap-10 justify-between">
           <h1 class="text-4xl leading-none tablet:text-7xl">
             <span class="font-black tracking-wide text-5xl tablet:text-7xl">
@@ -155,7 +157,7 @@ useHead({
         >
           Наши партнеры
         </h2>
-        <div class="my-10 backdrop-blur-md flex flex-col">
+        <div class="my-10 backdrop-blur-sm flex flex-col w-[108%] -ml-3 tablet:w-full tablet:-ml-0">
           <SlidersPartnersSlider :min-id="0" :max-id="6" />
           <SlidersPartnersSlider :min-id="7" :max-id="13" :reversed="true" />
           <SlidersPartnersSlider :min-id="14" :max-id="19" />
