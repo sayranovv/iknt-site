@@ -2,7 +2,7 @@
 import * as THREE from 'three'
 import Stats from 'three/addons/libs/stats.module.js'
 import { FBXLoader } from 'three/addons/loaders/FBXLoader.js'
-import { defineEmits, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const manager = new THREE.LoadingManager()
 
@@ -18,8 +18,6 @@ const clock = new THREE.Clock()
 const params = {
   asset: 'Samba Dancing'
 }
-
-const assets = ['Samba Dancing', 'morph_test']
 
 const container = ref<HTMLElement | null>(null) // создаем реф для контейнера
 
@@ -73,9 +71,9 @@ function init() {
   stats = new Stats()
 }
 
-function loadAsset(asset) {
+function loadAsset() {
   loader.load(
-    'models/Samba_Dancing.fbx',
+    'three/Samba_Dancing.fbx',
     function (group) {
       if (object) {
         object.traverse(function (child) {

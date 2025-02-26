@@ -41,7 +41,7 @@ function init() {
   const geometry = new THREE.BufferGeometry()
   const vertices = []
 
-  const sprite = new THREE.TextureLoader().load('textures/crystal.png')
+  const sprite = new THREE.TextureLoader().load('three/crystal.png')
 
   for (let i = 0; i < 10000; i++) {
     const x = 2000 * Math.random() - 1000

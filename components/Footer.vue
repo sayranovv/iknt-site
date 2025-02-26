@@ -17,7 +17,7 @@ const logoColor = 'white'
         loading="lazy"
         src="/bg/1.png"
         alt="bg"
-        class="absolute -top-12 -z-10 h-[150%] object-cover object-top opacity-80"
+        class="absolute -top-12 -z-10 h-[150%] object-cover object-bottom opacity-80"
       />
     </div>
     <div

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useHead } from '#imports'
-import CurrentDate from '~/components/CurrentDate.vue'
 
 useHead({
   title: 'Институт Компьютерных Наук и Технологий ПГНИУ',
@@ -36,7 +35,7 @@ useHead({
       class="w-screen tablet:h-screen -pb-12 bg-gradient-to-br from-[#0A0084] via-[#BF07A0] to-[#F88208]"
     >
       <section
-        class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 h-screen tablet:h-full pt-36 pb-20 tablet:pt-52 tablet:pb-32"
+        class="max-w-screen-laptop-l mx-auto px-3 tablet:px-5 laptop-l:px-0 h-screen tablet:h-full pt-36 pb-20 tablet:pt-40 tablet:pb-32"
       >
         <CurrentDate class="mb-2" />
         <div class="max-w-[730px] h-full flex flex-col gap-10 justify-between">
@@ -51,8 +50,8 @@ useHead({
             Инновации, передовые технологии, лучшие преподаватели и перспективы для каждого студента
           </p>
           <div class="flex gap-2 tablet:gap-6 tablet:w-1/2">
-            <Button_P class="w-1/2 px-2 py-1 tablet:py-2 tablet:px-9">О нас</Button_P>
-            <Button_P class="w-1/2 px-2 py-1 tablet:py-2 tablet:px-9">Поступить</Button_P>
+            <ButtonPrimary class="w-1/2 px-2 py-1 tablet:py-2 tablet:px-9">О нас</ButtonPrimary>
+            <ButtonPrimary class="w-1/2 px-2 py-1 tablet:py-2 tablet:px-9">Поступить</ButtonPrimary>
           </div>
         </div>
       </section>
@@ -84,14 +83,6 @@ useHead({
           </div>
         </div>
       </section>
-      <!--      <section class="mt-40 text-white">-->
-      <!--        <h2 class="text-4xl tablet:text-5xl font-black drop-shadow-[0_0_10px_rgba(189,7,181,0.9)]">-->
-      <!--          Последние новости-->
-      <!--        </h2>-->
-      <!--        <div>-->
-      <!--                  <NewsCarousel />-->
-      <!--        </div>-->
-      <!--      </section>-->
       <section class="mt-40 text-white">
         <h2
           class="text-4xl tablet:text-5xl font-black text-center drop-shadow-[0_0_6px_rgba(255,150,0,0.9)]"

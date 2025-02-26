@@ -10,6 +10,7 @@ onMounted(() => {
     'max-glare': 0.5
   })
 })
+
 defineProps<{
   position: 'right' | 'left'
   title: string
@@ -35,29 +36,6 @@ defineProps<{
         {{ description }}
       </p>
     </div>
-
-    <!--    <div class="relative w-full tablet:w-1/2 z-10">-->
-    <!--      <div-->
-    <!--        class="absolute w-[450px] h-[450px] blur-[60px] rounded-full top-1/2 -translate-y-1/2 right-1/2 tablet:right-52"-->
-    <!--        :class="[-->
-    <!--          `bg-${color}-600`,-->
-    <!--          position === 'right' ? 'translate-x-1/2' : '-translate-x-1/2',-->
-    <!--          position === 'left' ? 'left-36' : ''-->
-    <!--        ]"-->
-    <!--      ></div>-->
-    <!--      <div>-->
-    <!--        <img-->
-    <!--          :src="'/icons/' + icon + '.svg'"-->
-    <!--          alt="sdf"-->
-    <!--          class="img absolute w-[320px] h-[320px] right-1/2 tablet:right-14 -top-20 drop-shadow-[0_0_8px_rgba(0,0,0,0.6)]"-->
-    <!--          :class="[-->
-    <!--            position === 'right' ? 'translate-x-1/2' : '-translate-x-1/2',-->
-    <!--            position === 'left' ? '-left-7' : ''-->
-    <!--          ]"-->
-    <!--        />-->
-    <!--      </div>-->
-    <!--    </div>-->
-
     <div class="relative w-1/3 tablet:w-1/2">
       <div
         class="absolute w-[450px] h-[450px] -z-10 blur-[60px] rounded-full top-1/2 -translate-y-1/2 right-1/2 tablet:right-52"

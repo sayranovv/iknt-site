@@ -2,7 +2,6 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
 import { useEdProgramsStore } from '@/stores/edPrograms.store'
-import EdProgramsCard from '~/components/Cards/EdProgramsCard.vue'
 import { ref } from 'vue'
 
 const activeTab = ref<null | 'Бакалавриат' | 'Специалитет' | 'Магистратура'>(null)
@@ -256,7 +255,7 @@ const buttonClick = (tab: string): void => {
           v-for="program in edProgramsStore.filteredPrograms"
           :key="program.id"
         >
-          <EdProgramsCard
+          <CardsEdProgramsCard
             :letters3="program.letters3"
             :title="program.title"
             :programName="program.programName"
